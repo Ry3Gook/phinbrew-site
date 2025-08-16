@@ -21,11 +21,11 @@
         }
 
         .logo {
-            height: 50px;
+            height: 40px;
+            /* Adjust height to fit your logo */
             margin-right: 1rem;
         }
 
-        /* Adjust height as needed */
         .company-name {
             font-size: 1.5rem;
             font-weight: bold;
@@ -33,9 +33,9 @@
 
         nav {
             margin-left: auto;
+            /* Pushes navigation to the right */
         }
 
-        /* Pushes navigation to the right */
         nav a {
             color: white;
             margin: 0 1rem;
@@ -65,7 +65,8 @@
 
 <body>
     <header>
-        <img src="images/phinbrew-logo.png" alt="Phinbrew Logo" class="logo">
+        <img src="images/phinbrew-logo.png" alt="Phinbrew Logo" class="logo"
+            onerror="this.src='https://via.placeholder.com/100x40?text=Phinbrew+Logo';">
         <div class="company-name">Phinbrew</div>
         <nav>
             <a href="#home">Home</a>
