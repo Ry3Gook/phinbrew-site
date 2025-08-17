@@ -14,68 +14,74 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'Yuji Boku';
-    src: url('fonts/YujiBoku-Regular.woff2') format('woff2'),
-        url('fonts/YujiBoku-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 body {
     font-family: 'Yuji Syuku', 'Yuji Boku', 'Arial', sans-serif;
+    /* Fallback chain */
     margin: 0;
     padding: 0;
     color: #333;
     background-color: #F5F5DC;
+    /* Light beige/cream color */
 }
 
+/* Header */
 header {
-    background: url('image/senchajpg') center/cover no-repeat;
-    /* Corrected path */
+    background: #2E7D32;
+    /* Matcha green */
     display: flex;
     justify-content: space-between;
+    /* Logo on left, nav on right with space */
     align-items: center;
     padding: 20px 40px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: relative;
 }
 
-/* Optional Overlay for Readability (uncomment if needed) */
-/* header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 0;
-} */
+.logo {
+    text-align: center;
+    /* Center the logo */
+    flex: 0 0 auto;
+    /* Prevent logo from stretching */
+}
 
 .logo img {
     height: 180px;
+    /* Matches your previous working height */
     display: block;
     margin: 0 auto;
+    /* Center the image horizontally */
 }
 
+/* Navigation */
 nav {
     display: flex;
     justify-content: center;
+    /* Center the nav links */
+    flex-grow: 1;
+    /* Allow nav to take remaining space */
+    gap: 80px;
+    /* Doubled from 40px to ~1.5-2 inches (~80px) spacing between links */
 }
 
 nav a {
     color: #E8F5E9;
     text-decoration: none;
     font-size: 2.5em;
+    /* Slightly reduced from 3.3em for better fit */
     font-family: 'Yuji Syuku', 'Yuji Boku', 'Arial', sans-serif;
-    margin: 0 40px;
-    /* Replaced gap with margin for spacing */
+    /* Match site font */
+    margin: 0;
+    /* Remove default margin to rely on gap */
 }
 
+nav a:hover {
+    color: #A5D6A7;
+    /* Lighter green on hover */
+}
+
+/* Hero section */
 .hero {
-    background: url('image/hero.jpg') center/cover no-repeat;
-    /* Corrected path */
+    background: url('hero.jpg') center/cover no-repeat;
+    /* Updated to your image */
     height: 500px;
     display: flex;
     justify-content: center;
@@ -83,29 +89,90 @@ nav a {
     text-align: center;
 }
 
+.hero-content {
+    background: rgba(46, 125, 50, 0.7);
+    /* Semi-transparent matcha green overlay */
+    padding: 30px;
+    border-radius: 10px;
+}
+
 .hero h2 {
     color: #1B5E20;
+    /* Darker green */
     font-size: 2.5em;
     margin: 0 0 20px 0;
+    /* Bottom margin for spacing */
+    display: block;
+    /* Ensure on own line */
 }
 
 .hero p {
     color: #1B5E20;
+    /* Darker green */
     font-size: 1.2em;
     margin: 0 0 20px 0;
+    /* Bottom margin for spacing */
+    display: block;
+    /* Ensure on own line */
 }
 
 .shop-now {
     background: #A5D6A7;
+    /* Light matcha green */
     color: #2E7D32;
     padding: 12px 24px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    display: block;
+    /* Force new line */
     margin: 0 auto;
+    /* Center the button */
     width: fit-content;
+    /* Fit to content width */
 }
 
+.shop-now:hover {
+    background: #81C784;
+    /* Slightly darker green on hover */
+}
+
+/* Section styling */
+.section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.section h3 {
+    font-size: 2em;
+    /* Larger headers for consistency */
+}
+
+.section p {
+    font-size: 1.1em;
+    /* Slightly larger for readability */
+}
+
+/* Footer */
+footer {
+    background: #1B5E20;
+    /* Darker green */
+    color: #E8F5E9;
+    text-align: center;
+    padding: 20px;
+}
+
+.social-links a {
+    color: #A5D6A7;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-links a:hover {
+    color: #E8F5E9;
+}
+
+/* Mobile responsiveness */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -113,19 +180,22 @@ nav a {
     }
 
     .logo img {
-        height: 120px;
         margin-bottom: 10px;
+        /* Space below logo */
     }
 
     nav {
         flex-direction: column;
-        gap: 20px;
+        /* Stack links vertically on mobile */
+        gap: 10px;
+        /* Reduced gap for mobile */
         align-items: center;
+        /* Center align */
     }
 
     nav a {
         font-size: 1.5em;
-        padding: 10px;
+        /* Further reduced for mobile to fit */
     }
 
     .hero {
@@ -136,5 +206,8 @@ nav a {
         font-size: 2em;
     }
 
-    /* Add other mobile adjustments as needed */
+    .section h3 {
+        font-size: 1.5em;
+        /* Adjusted for mobile */
+    }
 }
