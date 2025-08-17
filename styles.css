@@ -19,6 +19,7 @@ header {
 
 .logo {
     text-align: center;
+    /* Center the logo and slogan */
 }
 
 .logo img {
@@ -26,6 +27,7 @@ header {
     /* Matches your previous working height */
     display: block;
     margin: 0 auto;
+    /* Center the image horizontally */
 }
 
 .slogan {
@@ -33,7 +35,7 @@ header {
     font-size: 1.5em;
     font-weight: bold;
     margin: 10px 0 0;
-    /* Space above slogan */
+    /* Add space above the slogan, none below */
 }
 
 nav {
@@ -125,7 +127,7 @@ footer {
 
     .logo img {
         margin-bottom: 10px;
-        /* Space between logo and slogan */
+        /* Space between logo and slogan on mobile */
     }
 
     nav a {
