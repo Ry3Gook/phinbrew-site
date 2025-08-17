@@ -30,6 +30,7 @@ header {
     /* Matcha green */
     display: flex;
     justify-content: space-between;
+    /* Logo on left, nav on right with space */
     align-items: center;
     padding: 20px 40px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -38,6 +39,8 @@ header {
 .logo {
     text-align: center;
     /* Center the logo */
+    flex: 0 0 auto;
+    /* Prevent logo from stretching */
 }
 
 .logo img {
@@ -48,26 +51,26 @@ header {
     /* Center the image horizontally */
 }
 
-/* .slogan { Removed since not needed anymore
-    color: #E8F5E9;
-    font-size: 6em;
-    font-family: 'Nuku Nuku', sans-serif;
-    margin: 10px 0 0;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-} */
-
+/* Navigation */
 nav {
-    margin-left: auto;
-    /* Keeps nav to the right */
+    display: flex;
+    justify-content: center;
+    /* Center the nav links */
+    flex-grow: 1;
+    /* Allow nav to take remaining space */
+    gap: 20px;
+    /* Half-inch (~20px) spacing between links */
 }
 
 nav a {
     color: #E8F5E9;
     text-decoration: none;
-    margin-left: 20px;
-    font-size: 1.1em;
+    font-size: 3.3em;
+    /* Tripled from 1.1em for ~3x size */
+    font-family: 'Yuji Syuku', 'Yuji Boku', 'Arial', sans-serif;
+    /* Match site font */
+    margin: 0;
+    /* Remove default margin to rely on gap */
 }
 
 nav a:hover {
@@ -181,8 +184,18 @@ footer {
         /* Space below logo */
     }
 
+    nav {
+        flex-direction: column;
+        /* Stack links vertically on mobile */
+        gap: 10px;
+        /* Reduced gap for mobile */
+        align-items: center;
+        /* Center align */
+    }
+
     nav a {
-        margin: 10px;
+        font-size: 2em;
+        /* Reduced for mobile to fit */
     }
 
     .hero {
