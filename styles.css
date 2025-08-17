@@ -66,25 +66,20 @@ nav a:hover {
     text-align: center;
 }
 
-.hero-content {
-    background: rgba(46, 125, 50, 0.7);
-    /* Semi-transparent matcha green overlay */
-    padding: 30px;
-    border-radius: 10px;
-}
-
 .hero h2 {
     color: #1B5E20;
-    /* Changed to a darker green for better readability */
+    /* Darker green */
     font-size: 2.5em;
-    margin: 0;
+    margin: 0 0 20px 0;
+    /* Add bottom margin for spacing */
 }
 
 .hero p {
     color: #1B5E20;
-    /* Changed to a darker green for better readability */
+    /* Darker green */
     font-size: 1.2em;
-    margin: 10px 0 20px;
+    margin: 0 0 20px 0;
+    /* Add bottom margin for spacing */
 }
 
 .shop-now {
@@ -95,6 +90,12 @@ nav a:hover {
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    display: block;
+    /* Make it block to force new line */
+    margin: 0 auto;
+    /* Center the button */
+    width: fit-content;
+    /* Fit to content width */
 }
 
 .shop-now:hover {
