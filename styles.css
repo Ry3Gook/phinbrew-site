@@ -18,19 +18,17 @@ header {
 }
 
 .logo {
-    height: 180px;
-    /* Adjusted from 260px to fit better */
-    margin-right: 0;
-    /* Remove right margin */
-    display: block;
-    /* Ensure it stacks */
+    text-align: center;
+    /* Center the image and slogan */
 }
 
 .logo img {
-    height: 100%;
-    /* Make the image fit the container */
+    height: 180px;
+    /* Adjusted height */
     display: block;
-    /* Remove any inline spacing */
+    /* Remove inline spacing */
+    margin: 0 auto;
+    /* Center the image */
 }
 
 .slogan {
@@ -114,4 +112,41 @@ footer {
     background: #1B5E20;
     /* Darker green */
     color: #E8F5E9;
-    text-align
+    text-align: center;
+    padding: 20px;
+}
+
+.social-links a {
+    color: #A5D6A7;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-links a:hover {
+    color: #E8F5E9;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .logo img {
+        margin-bottom: 10px;
+        /* Space between logo and slogan on mobile */
+    }
+
+    nav a {
+        margin: 10px;
+    }
+
+    .hero {
+        height: 400px;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+}
