@@ -18,12 +18,19 @@ header {
 }
 
 .logo {
-    font-size: 1.8em;
-    font-weight: bold;
-    color: #E8F5E9;
-    /* Light green for contrast */
+    height: 180px;
+    /* Adjusted from 260px to fit better */
+    margin-right: 0;
+    /* Remove right margin */
     display: block;
     /* Ensure it stacks */
+}
+
+.logo img {
+    height: 100%;
+    /* Make the image fit the container */
+    display: block;
+    /* Remove any inline spacing */
 }
 
 .slogan {
@@ -31,7 +38,7 @@ header {
     font-size: 1.5em;
     font-weight: bold;
     margin: 10px 0 0;
-    /* Space above slogan, none below */
+    /* Space above slogan */
 }
 
 nav {
@@ -53,7 +60,8 @@ nav a:hover {
 
 /* Hero section */
 .hero {
-    background: url('https://images.unsplash.com/photo-1614631447679-8db0334cb655') center/cover no-repeat;
+    background: url('hero.jpg') center/cover no-repeat;
+    /* Updated to your image */
     height: 500px;
     display: flex;
     justify-content: center;
@@ -68,7 +76,7 @@ nav a:hover {
     border-radius: 10px;
 }
 
-.hero h1 {
+.hero h2 {
     color: #E8F5E9;
     font-size: 2.5em;
     margin: 0;
@@ -95,46 +103,15 @@ nav a:hover {
     /* Slightly darker green on hover */
 }
 
+/* Section styling (for consistency) */
+.section {
+    padding: 2rem;
+    text-align: center;
+}
+
 /* Footer */
 footer {
     background: #1B5E20;
     /* Darker green */
     color: #E8F5E9;
-    text-align: center;
-    padding: 20px;
-}
-
-.social-links a {
-    color: #A5D6A7;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-.social-links a:hover {
-    color: #E8F5E9;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        padding: 15px;
-    }
-
-    .logo {
-        margin-bottom: 10px;
-        /* Space between logo and slogan on mobile */
-    }
-
-    nav a {
-        margin: 10px;
-    }
-
-    .hero {
-        height: 400px;
-    }
-
-    .hero h1 {
-        font-size: 2em;
-    }
-}
+    text-align
