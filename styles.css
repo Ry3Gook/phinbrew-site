@@ -66,14 +66,23 @@ nav a:hover {
     text-align: center;
 }
 
+.hero-content {
+    background: rgba(46, 125, 50, 0.7);
+    /* Semi-transparent matcha green overlay */
+    padding: 30px;
+    border-radius: 10px;
+}
+
 .hero h2 {
-    color: #E8F5E9;
+    color: #1B5E20;
+    /* Changed to a darker green for better readability */
     font-size: 2.5em;
     margin: 0;
 }
 
 .hero p {
-    color: #F1F8E9;
+    color: #1B5E20;
+    /* Changed to a darker green for better readability */
     font-size: 1.2em;
     margin: 10px 0 20px;
 }
