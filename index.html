@@ -24,11 +24,11 @@
                 onerror="this.src='https://via.placeholder.com/100x40?text=Phinbrew+Logo';">
         </div>
         <nav aria-label="Main navigation">
+            <a href="#home">Home</a>
             <a href="#shop">Shop</a>
             <a href="#about">About</a>
-            <a href="#home">Home</a>
-            <a href="#contact">Contact</a>
             <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
     <main>
@@ -38,8 +38,9 @@
                 <p>Join our waitlist for premium phins, teas, and coffee!</p>
                 <form name="waitlist" method="POST" data-netlify="true" action="/success">
                     <input type="hidden" name="form-name" value="waitlist">
-                    <input type="email" name="email" placeholder="Enter your email" required>
-                    <button type="submit" class="shop-now">Sign Up</button>
+                    <label for="email" class="sr-only">Enter your email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <button type="submit" class="shop-now" aria-label="Sign up for waitlist">Sign Up</button>
                 </form>
             </div>
         </section>
@@ -52,11 +53,13 @@
             <p>Stay tuned for logo-engraved phins, teas, coffee, and accessories!</p>
             <div class="product-grid">
                 <div class="product-card">
-                    <img src="image/phin.jpg" alt="Vietnamese Phin Brewer">
+                    <img src="image/phin.jpg" alt="Vietnamese Phin Brewer"
+                        onerror="this.src='https://via.placeholder.com/200x200?text=Phin';">
                     <h4>Phin Brewer</h4>
                 </div>
                 <div class="product-card">
-                    <img src="image/tea.jpg" alt="Japanese Premium Tea">
+                    <img src="image/tea.jpg" alt="Japanese Premium Tea"
+                        onerror="this.src='https://via.placeholder.com/200x200?text=Tea';">
                     <h4>Premium Tea</h4>
                 </div>
             </div>
@@ -68,8 +71,8 @@
     </main>
     <footer id="contact">
         <p>Follow us:
-            <a class="social-links" href="https://x.com/phinbrew" target="_blank">X</a> |
-            <a class="social-links" href="https://instagram.com/phinbrew" target="_blank">Instagram</a>
+            <a class="social-links" href="https://x.com/phinbrew" target="_blank" rel="noopener">X</a> |
+            <a class="social-links" href="https://instagram.com/phinbrew" target="_blank" rel="noopener">Instagram</a>
         </p>
         <p>&copy; 2025 Phinbrew</p>
     </footer>
