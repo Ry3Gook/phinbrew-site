@@ -22,6 +22,21 @@ header {
     font-weight: bold;
     color: #E8F5E9;
     /* Light green for contrast */
+    display: block;
+    /* Ensure it stacks */
+}
+
+.slogan {
+    color: #E8F5E9;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 10px 0 0;
+    /* Space above slogan, none below */
+}
+
+nav {
+    margin-left: auto;
+    /* Keeps nav to the right */
 }
 
 nav a {
@@ -106,6 +121,11 @@ footer {
         padding: 15px;
     }
 
+    .logo {
+        margin-bottom: 10px;
+        /* Space between logo and slogan on mobile */
+    }
+
     nav a {
         margin: 10px;
     }
@@ -117,11 +137,4 @@ footer {
     .hero h1 {
         font-size: 2em;
     }
-}
-
-.slogan {
-    color: #E8F5E9;
-    font-size: 1.5em;
-    font-weight: bold;
-    margin: 10px 0;
 }
