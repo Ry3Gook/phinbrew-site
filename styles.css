@@ -58,8 +58,8 @@ nav {
     /* Center the nav links */
     flex-grow: 1;
     /* Allow nav to take remaining space */
-    gap: 40px;
-    /* Significantly increased to ~1 inch (~40px) spacing between links */
+    gap: 80px;
+    /* Doubled from 40px to ~1.5-2 inches (~80px) spacing between links */
 }
 
 nav a {
