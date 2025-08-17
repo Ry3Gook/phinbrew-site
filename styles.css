@@ -73,20 +73,24 @@ nav a:hover {
     border-radius: 10px;
 }
 
-.hero h2 {
+.hero-content h2 {
     color: #1B5E20;
     /* Darker green */
     font-size: 2.5em;
     margin: 0 0 20px 0;
-    /* Add bottom margin for spacing */
+    /* Bottom margin for spacing */
+    display: block;
+    /* Ensure on own line */
 }
 
-.hero p {
+.hero-content p {
     color: #1B5E20;
     /* Darker green */
     font-size: 1.2em;
     margin: 0 0 20px 0;
-    /* Add bottom margin for spacing */
+    /* Bottom margin for spacing */
+    display: block;
+    /* Ensure on own line */
 }
 
 .shop-now {
@@ -98,7 +102,7 @@ nav a:hover {
     border-radius: 5px;
     font-weight: bold;
     display: block;
-    /* Make it block to force new line */
+    /* Force new line */
     margin: 0 auto;
     /* Center the button */
     width: fit-content;
