@@ -19,16 +19,13 @@ header {
 
 .logo {
     text-align: center;
-    /* Center the image and slogan */
 }
 
 .logo img {
     height: 180px;
-    /* Adjusted height */
+    /* Matches your previous working height */
     display: block;
-    /* Remove inline spacing */
     margin: 0 auto;
-    /* Center the image */
 }
 
 .slogan {
@@ -67,13 +64,6 @@ nav a:hover {
     text-align: center;
 }
 
-.hero-content {
-    background: rgba(46, 125, 50, 0.7);
-    /* Semi-transparent matcha green overlay */
-    padding: 30px;
-    border-radius: 10px;
-}
-
 .hero h2 {
     color: #E8F5E9;
     font-size: 2.5em;
@@ -101,7 +91,7 @@ nav a:hover {
     /* Slightly darker green on hover */
 }
 
-/* Section styling (for consistency) */
+/* Section styling */
 .section {
     padding: 2rem;
     text-align: center;
@@ -135,7 +125,7 @@ footer {
 
     .logo img {
         margin-bottom: 10px;
-        /* Space between logo and slogan on mobile */
+        /* Space between logo and slogan */
     }
 
     nav a {
