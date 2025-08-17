@@ -58,15 +58,15 @@ nav {
     /* Center the nav links */
     flex-grow: 1;
     /* Allow nav to take remaining space */
-    gap: 20px;
-    /* Half-inch (~20px) spacing between links */
+    gap: 40px;
+    /* Significantly increased to ~1 inch (~40px) spacing between links */
 }
 
 nav a {
     color: #E8F5E9;
     text-decoration: none;
-    font-size: 3.3em;
-    /* Tripled from 1.1em for ~3x size */
+    font-size: 2.5em;
+    /* Slightly reduced from 3.3em for better fit */
     font-family: 'Yuji Syuku', 'Yuji Boku', 'Arial', sans-serif;
     /* Match site font */
     margin: 0;
@@ -194,8 +194,8 @@ footer {
     }
 
     nav a {
-        font-size: 2em;
-        /* Reduced for mobile to fit */
+        font-size: 1.5em;
+        /* Further reduced for mobile to fit */
     }
 
     .hero {
