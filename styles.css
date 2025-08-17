@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Yuji Syuku';
+    src: url('fonts/YujiSyuku-Regular.woff2') format('woff2'),
+        url('fonts/YujiSyuku-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -33,10 +41,18 @@ header {
 
 .slogan {
     color: #E8F5E9;
-    font-size: 1.5em;
-    font-weight: bold;
+    font-size: 2em;
+    /* Larger for power */
+    font-family: 'Yuji Syuku', sans-serif;
+    /* Custom aggressive font */
     margin: 10px 0 0;
     /* Add space above the slogan, none below */
+    text-transform: uppercase;
+    /* Adds militaristic feel */
+    letter-spacing: 2px;
+    /* Space for impact */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    /* Shadow for depth and aggression */
 }
 
 nav {
