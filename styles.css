@@ -26,21 +26,39 @@ body {
 
 /* Header */
 header {
-    background: #2E7D32;
-    /* Matcha green */
+    background: url('image/senchajpg') center/cover no-repeat;
+    /* Corrected path */
     display: flex;
     justify-content: space-between;
     /* Logo on left, nav on right with space */
     align-items: center;
     padding: 20px 40px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    /* For overlay if needed */
 }
 
-.logo {
+/* Optional Overlay for Readability (uncomment and adjust if text is hard to read) */
+/* header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent black overlay */
+z-index: 0;
+}
+
+*/ .logo {
     text-align: center;
     /* Center the logo */
     flex: 0 0 auto;
     /* Prevent logo from stretching */
+    position: relative;
+    /* Ensure logo stays above background */
+    z-index: 1;
+    /* Bring logo above overlay if used */
 }
 
 .logo img {
@@ -59,7 +77,11 @@ nav {
     flex-grow: 1;
     /* Allow nav to take remaining space */
     gap: 80px;
-    /* Doubled from 40px to ~1.5-2 inches (~80px) spacing between links */
+    /* ~1.5-2 inches spacing between links */
+    position: relative;
+    /* Ensure nav stays above background */
+    z-index: 1;
+    /* Bring nav above overlay if used */
 }
 
 nav a {
