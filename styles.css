@@ -124,8 +124,11 @@ nav {
 nav a {
     color: #E8F5E9;
     text-decoration: none;
-    font-size: 2em;
+    font-size: 2.5em;
+    /* Increased from 2em for bigger text */
     font-family: 'Yuji Syuku', Arial, sans-serif;
+    font-weight: bold;
+    /* Added for bolder text */
     transition: color 0.3s ease;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
@@ -202,8 +205,11 @@ footer {
     }
 
     nav a {
-        font-size: 1.8em;
+        font-size: 2.2em;
+        /* Increased from 1.8em for bigger on mobile */
         padding: 12px;
+        font-weight: bold;
+        /* Bolder on mobile too */
     }
 
     .section h3 {
