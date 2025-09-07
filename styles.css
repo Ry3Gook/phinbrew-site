@@ -216,3 +216,29 @@ footer {
         font-size: 1.8em;
     }
 }
+
+/* Add to the end of styles.css */
+.shop-now {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2E7D32;
+    color: #E8F5E9;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.shop-now:hover {
+    background-color: #A5D6A7;
+}
+
+.section ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.section li {
+    margin-bottom: 0.8rem;
+}
