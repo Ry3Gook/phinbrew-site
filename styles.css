@@ -96,9 +96,10 @@ header::before {
 }
 
 .top-nav .logo-container {
-    width: 200px;
-    /* Same size as before */
-    height: 120px;
+    width: 150px;
+    /* Reduced from 200px to make logo smaller */
+    height: 75px;
+    /* Reduced from 120px, adjusted for aspect ratio */
     margin-right: 2rem;
     /* Space between logo and menu */
 }
@@ -429,6 +430,10 @@ footer a:hover {
     }
 
     .top-nav .logo-container {
+        width: 100px;
+        /* Further reduced for mobile to prevent 'huge' feel */
+        height: 50px;
+        /* Adjusted for aspect ratio */
         margin-right: 0;
         margin-bottom: 1rem;
     }
