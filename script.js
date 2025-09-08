@@ -18,7 +18,7 @@ setTimeout(() => {
 document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
     toggle.addEventListener('click', (e) => {
         if (window.innerWidth <= 768) {
-            e.preventDefault(); // Prevent navigating to main link on mobile
+            e.preventDefault();
             const dropdownMenu = toggle.nextElementSibling;
             dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
         }

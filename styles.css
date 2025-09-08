@@ -67,7 +67,9 @@ header {
     align-items: center;
     padding: 20px 40px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    /* Removed overflow: hidden to prevent clipping dropdowns */
+    z-index: 100;
+    /* Ensure header is above body content */
 }
 
 header::before {
@@ -112,7 +114,8 @@ nav {
     justify-content: center;
     flex-grow: 1;
     gap: 60px;
-    z-index: 1;
+    z-index: 101;
+    /* Above header to ensure dropdowns are visible */
 }
 
 nav a {
@@ -154,11 +157,14 @@ nav a:hover {
     position: absolute;
     background-color: #FFF8E1;
     min-width: 250px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
-    z-index: 1000;
+    z-index: 102;
+    /* Higher than nav to appear above other elements */
     top: 100%;
     left: 0;
+    padding: 10px 0;
+    /* Add padding for better spacing */
 }
 
 .dropdown-menu a {
@@ -167,7 +173,7 @@ nav a:hover {
     color: #333;
     text-decoration: none;
     font-size: 1.5em;
-    /* Smaller font size for submenus */
+    /* Smaller font for submenus */
     font-family: 'Yuji Syuku', Arial, sans-serif;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -189,6 +195,9 @@ nav a:hover {
     margin: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    /* Ensure sections are below nav */
 }
 
 .section h3 {
@@ -201,12 +210,39 @@ nav a:hover {
     line-height: 1.6;
 }
 
+.section ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.section li {
+    margin-bottom: 0.8rem;
+}
+
+.shop-now {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2E7D32;
+    color: #E8F5E9;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.shop-now:hover {
+    background-color: #A5D6A7;
+}
+
 /* Footer */
 footer {
     background: #1B5E20;
     color: #E8F5E9;
     text-align: center;
     padding: 30px;
+    position: relative;
+    z-index: 1;
 }
 
 .social-links {
@@ -267,31 +303,16 @@ footer {
         width: 100%;
         background-color: #FFF8E1;
         margin-bottom: 15px;
+        box-shadow: none;
+        /* Remove shadow for mobile to blend better */
     }
 
     .dropdown-menu a {
         font-size: 1.3em;
-        /* Slightly smaller for mobile submenus */
         padding: 8px 10px;
     }
 
     .section h3 {
         font-size: 1.8em;
     }
-}
-
-/* Add if not already present: Shop Now style */
-.shop-now {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #2E7D32;
-    color: #E8F5E9;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.shop-now:hover {
-    background-color: #A5D6A7;
 }
