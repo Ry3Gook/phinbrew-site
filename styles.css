@@ -203,6 +203,12 @@ header::before {
     text-align: center;
     background-color: var(--section-bg);
     /* No margin-top, as top-nav handles spacing */
+    min-height: 60vh;
+    /* Ensures content section fills more of the screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Centers short content vertically */
 }
 
 /* Buttons */
@@ -419,6 +425,22 @@ footer a:hover {
     width: 100%;
     height: auto;
     border-radius: 4px;
+}
+
+/* Added blog grid styles */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.blog-post {
+    background-color: var(--hero-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: left;
+    color: #333;
 }
 
 /* Mobile Responsiveness */
