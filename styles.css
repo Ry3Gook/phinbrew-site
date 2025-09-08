@@ -1,15 +1,17 @@
 /* CSS Variables */
 :root {
-    --bg-primary: #102A0E;
-    /* Deep dark green */
+    --bg-primary: #1A3C1A;
+    /* Lighter green for less intensity */
     --text-light: #F5F5F5;
     /* Soft white */
     --accent-green: #3A6B35;
     /* Sencha green */
     --accent-hover: #5E9C5E;
     /* Hover green */
-    --section-bg: #1E3A1F;
-    /* Lighter dark */
+    --section-bg: #2A4D2A;
+    /* Slightly lighter section background */
+    --hero-bg: #F8F1E9;
+    /* Off-white for hero to pop */
 }
 
 /* Reset */
@@ -39,7 +41,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('images/dark-texture.jpg');
+    background-image: url('image/dark-texture.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-blend-mode: multiply;
@@ -50,10 +52,26 @@ body::before {
 /* Header and Nav */
 header {
     background-color: var(--bg-primary);
+    background-image: url('image/sencha.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 60, 26, 0.7);
+    /* Semi-transparent green overlay */
+    z-index: 0;
 }
 
 nav {
@@ -62,11 +80,15 @@ nav {
     align-items: center;
     padding: 1rem 2rem;
     height: 70px;
+    position: relative;
+    /* Ensure nav stays above header's ::before */
 }
 
 .logo-container {
     width: 100px;
     height: 50px;
+    z-index: 1;
+    /* Above header background */
 }
 
 .logo {
@@ -78,6 +100,8 @@ nav {
 .nav-links {
     display: flex;
     gap: 1.5rem;
+    z-index: 1;
+    /* Above header background */
 }
 
 .nav-link {
@@ -134,11 +158,16 @@ nav {
     color: var(--text-light);
     font-size: 1.5rem;
     cursor: pointer;
+    z-index: 1;
+    /* Above header background */
 }
 
 /* Hero Section */
 .hero {
-    background-color: var(--section-bg);
+    background-color: var(--hero-bg);
+    /* Off-white for contrast */
+    color: #333;
+    /* Darker text for readability */
     text-align: center;
     padding: 5rem 2rem;
     margin-top: 70px;
@@ -159,12 +188,7 @@ nav {
 .content {
     padding: 2rem;
     text-align: center;
-}
-
-.content h2 {
-    font-family: 'Yuji Syuku', serif;
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    background-color: var(--section-bg);
 }
 
 /* Buttons */
