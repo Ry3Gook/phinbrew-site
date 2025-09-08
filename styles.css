@@ -324,12 +324,15 @@ footer a:hover {
     background-size: cover;
     background-position: center;
     text-align: center;
-    padding: 6rem 2rem;
+    padding: 8rem 2rem;
+    /* Increased padding for more space */
     margin-top: 240px;
     /* Below fixed header */
     color: #fff;
     /* White text for contrast */
     position: relative;
+    min-height: 300px;
+    /* Ensure hero is tall enough */
 }
 
 .about-hero::before {
@@ -371,7 +374,8 @@ footer a:hover {
     align-items: center;
     gap: 2rem;
     margin-bottom: 3rem;
-    padding: 2rem;
+    padding: 3rem 2rem;
+    /* Increased top/bottom padding for more space */
     background-color: var(--section-bg);
     /* Default green */
     border-radius: 8px;
@@ -379,9 +383,13 @@ footer a:hover {
     transition: transform 0.3s ease;
 }
 
+.about-section:first-of-type {
+    margin-top: 2rem;
+    /* Small gap after hero to prevent cutoff */
+}
+
 .about-section:hover {
     transform: translateY(-5px);
-    /* Subtle hover lift */
 }
 
 .flex-row {
@@ -404,14 +412,16 @@ footer a:hover {
 }
 
 .text-block p {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    /* More space between paragraphs */
 }
 
 .text-block blockquote {
     font-style: italic;
     border-left: 4px solid var(--accent-gold);
     padding-left: 1rem;
-    margin: 1rem 0;
+    margin: 1.5rem 0;
+    /* Extra margin around quote */
     color: var(--accent-gold);
 }
 
@@ -465,23 +475,29 @@ footer a:hover {
 
 /* Mobile Responsiveness for About Page */
 @media (max-width: 768px) {
+    .about-hero {
+        padding: 6rem 1rem;
+        /* Adjust for mobile */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
     .about-section {
         flex-direction: column;
+        padding: 2rem 1rem;
     }
 
     .flex-row-reverse {
         flex-direction: column;
     }
 
-    .about-hero {
-        padding: 3rem 1rem;
-    }
-
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.2rem;
+    .text-block p {
+        margin-bottom: 1rem;
     }
 }
