@@ -244,68 +244,6 @@ footer a:hover {
     color: var(--accent-hover);
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .top-nav {
-        padding: 1rem;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .top-nav .logo-container {
-        margin-right: 0;
-        margin-bottom: 1rem;
-    }
-
-    .top-nav .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .top-nav .nav-links.active {
-        display: flex;
-    }
-
-    .top-nav .mobile-toggle {
-        display: block;
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-    }
-
-    .top-nav .dropdown-content {
-        position: static;
-        box-shadow: none;
-        display: none;
-    }
-
-    .top-nav .dropdown-content.active {
-        display: block;
-    }
-
-    .nav-link,
-    .dropdown-toggle {
-        font-size: 1.8rem;
-    }
-
-    .dropdown-content a {
-        font-size: 1.3rem;
-    }
-
-    .hero {
-        padding: 3rem 1rem;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .content {
-        padding: 3rem 1rem;
-    }
-}
-
 /* About Page Specific Styles */
 .about-hero {
     background-image: url('https://via.placeholder.com/1920x400?text=Tea+Background');
@@ -460,6 +398,90 @@ footer a:hover {
     color: #fff;
 }
 
+/* Added product grid styles */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.product-item {
+    background-color: var(--hero-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    color: #333;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .top-nav {
+        padding: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .top-nav .logo-container {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .top-nav .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .top-nav .nav-links.active {
+        display: flex;
+    }
+
+    .top-nav .mobile-toggle {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .top-nav .dropdown-content {
+        position: static;
+        box-shadow: none;
+        display: none;
+    }
+
+    .top-nav .dropdown-content.active {
+        display: block;
+    }
+
+    .nav-link,
+    .dropdown-toggle {
+        font-size: 1.8rem;
+    }
+
+    .dropdown-content a {
+        font-size: 1.3rem;
+    }
+
+    .hero {
+        padding: 3rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .content {
+        padding: 3rem 1rem;
+    }
+}
+
 /* Mobile Responsiveness for About Page */
 @media (max-width: 768px) {
     .about-hero {
@@ -487,62 +509,4 @@ footer a:hover {
     .text-block p {
         margin-bottom: 1rem;
     }
-}
-
-.small-header {
-    background-color: var(--bg-primary);
-    /* Subtle green */
-    padding: 1rem 3rem;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-}
-
-.menu-bar {
-    background-color: var(--nav-backdrop);
-    padding: 1rem 3rem;
-    position: fixed;
-    top: 60px;
-    /* Adjust based on small header height */
-    width: 100%;
-    z-index: 999;
-    display: flex;
-    justify-content: center;
-}
-
-.hero-banner {
-    position: relative;
-    height: 500px;
-    /* Large height for banner */
-    background-image: url('https://via.placeholder.com/1920x500?text=Busy+Cafe');
-    /* Replace with your busy cafe photo */
-    background-size: cover;
-    background-position: center;
-    margin-top: 120px;
-    /* Space for header + menu */
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    /* Slight transparency on photo */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.brand-name {
-    font-family: 'Yuji Syuku', serif;
-    font-size: 4rem;
-    color: #fff;
-    /* White text that pops */
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    /* Shadow for more pop */
 }
