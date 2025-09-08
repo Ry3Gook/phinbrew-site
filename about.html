@@ -9,53 +9,55 @@
     <meta name="keywords" content="Phinbrew, Vietnamese coffee, Japanese tea, phin brewing, coffee accessories">
     <meta name="author" content="Phinbrew">
     <title>About - Phinbrew</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Yuji+Syuku&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="image/favicon.png">
 </head>
 
 <body>
-    <div class="preloader">
-        <div class="spinner"></div>
-    </div>
     <header>
-        <div class="logo">
-            <img src="image/phinbrew-logo.webp" alt="Phinbrew Logo"
-                onerror="this.src='https://via.placeholder.com/100x40?text=Phinbrew+Logo';">
-        </div>
-        <nav aria-label="Main navigation">
-            <div class="dropdown">
-                <a href="index.html" class="dropdown-toggle">Tea</a>
-                <div class="dropdown-menu">
-                    <a href="green-tea.html">Green Tea</a>
-                    <a href="black-tea.html">Black Tea</a>
-                    <a href="oolong-tea.html">Oolong Tea</a>
-                    <a href="medicinal-tea.html">Medicinal Tea and Herbs</a>
-                    <a href="herbal-tea.html">Herbal Tea</a>
-                </div>
+        <nav>
+            <div class="logo-container">
+                <img src="image/phinbrew-logo.webp" alt="Phinbrew Logo" class="logo">
             </div>
-            <div class="dropdown">
-                <a href="shop.html" class="dropdown-toggle">Accessories</a>
-                <div class="dropdown-menu">
-                    <a href="tea-accessories.html">Tea Accessories</a>
-                    <a href="coffee-accessories.html">Coffee Accessories</a>
+            <div class="nav-links">
+                <div class="dropdown">
+                    <span class="dropdown-toggle">Tea</span>
+                    <div class="dropdown-content">
+                        <a href="green-tea.html">Green Tea</a>
+                        <a href="black-tea.html">Black Tea</a>
+                        <a href="oolong-tea.html">Oolong Tea</a>
+                        <a href="medicinal-tea.html">Medicinal Tea and Herbs</a>
+                        <a href="herbal-tea.html">Herbal Tea</a>
+                    </div>
                 </div>
-            </div>
-            <div class="dropdown">
-                <a href="contact.html" class="dropdown-toggle">Traditional Incense</a>
-                <div class="dropdown-menu">
-                    <a href="chinese-incense.html">Chinese Incense</a>
-                    <a href="japanese-incense.html">Japanese Incense</a>
-                    <a href="indian-incense.html">Indian Incense</a>
-                    <a href="incense-accessories.html">Incense Accessories</a>
+                <div class="dropdown">
+                    <span class="dropdown-toggle">Accessories</span>
+                    <div class="dropdown-content">
+                        <a href="tea-accessories.html">Tea Accessories</a>
+                        <a href="coffee-accessories.html">Coffee Accessories</a>
+                    </div>
                 </div>
+                <div class="dropdown">
+                    <span class="dropdown-toggle">Traditional Incense</span>
+                    <div class="dropdown-content">
+                        <a href="chinese-incense.html">Chinese Incense</a>
+                        <a href="japanese-incense.html">Japanese Incense</a>
+                        <a href="indian-incense.html">Indian Incense</a>
+                        <a href="incense-accessories.html">Incense Accessories</a>
+                    </div>
+                </div>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="about.html" class="nav-link">About</a>
             </div>
-            <a href="blog.html">Blog</a>
-            <a href="about.html">About</a>
+            <button class="mobile-toggle">☰</button>
         </nav>
     </header>
+
     <main>
-        <section class="section">
-            <h3>Welcome to Phinbrew</h3>
+        <section class="content">
+            <h2>Welcome to Phinbrew</h2>
             <p>Welcome to Phinbrew, your source for premium Japanese sencha, matcha, Korean Jeoncha, Chinese teas,
                 coffee accessories, and traditional incense. Founded by Riley, a lifelong tea enthusiast, Phinbrew was
                 born from his love for Japanese tea discovered while serving in Japan and Korea with the U.S. Air Force.
@@ -67,8 +69,8 @@
                 fight free radicals, potentially reducing cancer risk and boosting wellness. At Phinbrew, we craft
                 rituals that blend tea and incense to elevate your mind and body.</p>
         </section>
-        <section class="section">
-            <h3>Our Story</h3>
+        <section class="content">
+            <h2>Our Story</h2>
             <p>Riley’s passion for tea ignited in Japan and Korea, where sencha’s grassy notes and Jeoncha’s roasted
                 depth captivated him during his USAF service. Living in Brussels, Belgium, as a karate brown belt, he
                 found green tea amplified his focus, echoing the discipline of Miyamoto Musashi. Phinbrew blends this
@@ -78,8 +80,8 @@
                 sourcing from trusted farms in Japan, Korea, and China for authenticity and sustainability. From matcha
                 whisks to coffee grinders, every item sparks wellness and focus.</p>
         </section>
-        <section class="section">
-            <h3>Our Mission and Values</h3>
+        <section class="content">
+            <h2>Our Mission and Values</h2>
             <p>Our mission is to empower your body and mind through premium teas, coffee accessories, and traditional
                 incense, inspired by martial arts discipline and green tea’s vitality. Our values:</p>
             <ul>
@@ -92,26 +94,26 @@
                 <li><strong>Customer-First:</strong> Fast shipping and tea tips for a vibrant community.</li>
             </ul>
         </section>
-        <section class="section">
-            <h3>Why Choose Phinbrew?</h3>
+        <section class="content">
+            <h2>Why Choose Phinbrew?</h2>
             <p>Join the Phinbrew community, where tea lovers embrace wellness and focus through hand-picked Japanese
                 sencha, Korean Jeoncha, and traditional incense. Our curated accessories elevate your rituals, inspired
                 by the clarity of martial arts.</p>
         </section>
-        <section class="section">
-            <h3>Start Your Ritual Today</h3>
-            <p>Ready to experience the focus and wellness of sencha? <a href="shop.html" class="shop-now">Shop Now</a>
+        <section class="content">
+            <h2>Start Your Ritual Today</h2>
+            <p>Ready to experience the focus and wellness of sencha? <a href="shop.html" class="button">Shop Now</a>
                 for premium teas, accessories, and incense hand-picked by Riley. Join our community and get 10% off your
                 first order!</p>
         </section>
     </main>
-    <footer id="contact">
-        <p>Follow us:
-            <a class="social-links" href="https://x.com/phinbrew" target="_blank">X</a> |
-            <a class="social-links" href="https://instagram.com/phinbrew" target="_blank">Instagram</a>
-        </p>
+
+    <footer>
+        <p>Follow us: <a href="https://x.com/phinbrew" target="_blank">X</a> | <a href="https://instagram.com/phinbrew"
+                target="_blank">Instagram</a></p>
         <p>&copy; 2025 Phinbrew</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 
