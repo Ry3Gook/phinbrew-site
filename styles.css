@@ -1,17 +1,19 @@
 /* CSS Variables */
 :root {
     --bg-primary: #1A3C1A;
-    /* Lighter green */
+    /* Subtle green */
     --text-light: #F5F5F5;
     /* Soft white */
-    --accent-green: #3A6B35;
-    /* Sencha green */
-    --accent-hover: #5E9C5E;
-    /* Hover green */
+    --accent-gold: #D4A017;
+    /* Premium gold */
+    --accent-hover: #E8B923;
+    /* Brighter gold hover */
     --section-bg: #2A4D2A;
-    /* Slightly lighter section background */
+    /* Lighter section green */
     --hero-bg: #F8F1E9;
     /* Off-white for hero */
+    --nav-backdrop: rgba(0, 0, 0, 0.6);
+    /* Dark backdrop for nav readability */
 }
 
 /* Reset */
@@ -60,19 +62,32 @@ header {
     z-index: 1000;
 }
 
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Dark overlay for readability */
+    z-index: 0;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 3rem;
+    /* More padding for premium feel */
     height: 120px;
-    /* Taller header */
     position: relative;
+    background-color: var(--nav-backdrop);
+    /* Backdrop for nav readability */
 }
 
 .logo-container {
     width: 150px;
-    /* Larger logo */
     height: 80px;
     z-index: 1;
 }
@@ -81,20 +96,35 @@ nav {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    /* Subtle shadow for premium look */
 }
 
 .nav-links {
     display: flex;
-    gap: 2rem;
-    /* More space between links */
+    gap: 2.5rem;
+    /* More spacing */
+    justify-content: center;
+    /* Center nav links */
+    flex-grow: 1;
+    /* Take available space */
     z-index: 1;
 }
 
 .nav-link {
     color: var(--text-light);
     text-decoration: none;
-    font-size: 1.6rem;
-    /* Larger nav text */
+    font-size: 1.8rem;
+    /* Larger text */
+    font-weight: 600;
+    /* Bolder for premium feel */
+    font-family: 'Yuji Syuku', serif;
+    /* Elegant font */
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-gold);
 }
 
 .dropdown {
@@ -103,18 +133,23 @@ nav {
 
 .dropdown-toggle {
     color: var(--text-light);
-    font-size: 1.6rem;
-    /* Larger dropdown toggle text */
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: 'Yuji Syuku', serif;
     cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.dropdown-toggle:hover {
+    color: var(--accent-gold);
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: var(--section-bg);
-    min-width: 200px;
-    /* Wider dropdown */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    min-width: 220px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
     border-radius: 4px;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -130,90 +165,15 @@ nav {
 
 .dropdown-content a {
     color: var(--text-light);
-    padding: 0.8rem 1rem;
+    padding: 1rem 1.2rem;
     text-decoration: none;
     display: block;
-    font-size: 1.2rem;
-    /* Larger dropdown item text */
+    font-size: 1.3rem;
+    font-weight: 400;
 }
 
 .dropdown-content a:hover {
     background-color: var(--accent-hover);
-}
-
-.mobile-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: var(--text-light);
-    font-size: 2rem;
-    /* Larger hamburger icon */
-    cursor: pointer;
-    z-index: 1;
-}
-
-/* Hero Section */
-.hero {
-    background-color: var(--hero-bg);
-    color: #333;
-    text-align: center;
-    padding: 5rem 2rem;
-    margin-top: 120px;
-    /* Match taller header */
-}
-
-.hero h1 {
-    font-family: 'Yuji Syuku', serif;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.hero p {
-    font-size: 1.3rem;
-    margin-bottom: 1.5rem;
-}
-
-/* Content Section */
-.content {
-    padding: 2rem;
-    text-align: center;
-    background-color: var(--section-bg);
-}
-
-/* Buttons */
-.button {
-    background-color: var(--accent-green);
-    color: var(--text-light);
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-.button:hover {
-    background-color: var(--accent-hover);
-}
-
-/* Footer */
-footer {
-    background-color: var(--bg-primary);
-    text-align: center;
-    padding: 1.5rem;
-    margin-top: auto;
-}
-
-footer p {
-    font-size: 1.2rem;
-}
-
-footer a {
-    color: var(--accent-green);
-    text-decoration: none;
-}
-
-footer a:hover {
-    color: var(--accent-hover);
 }
 
 /* Mobile Responsiveness */
@@ -227,7 +187,6 @@ footer a:hover {
         flex-direction: column;
         position: fixed;
         top: 120px;
-        /* Match taller header */
         left: 0;
         width: 100%;
         background-color: var(--section-bg);
@@ -259,11 +218,143 @@ footer a:hover {
     .nav-link,
     .dropdown-toggle {
         font-size: 1.4rem;
-        /* Slightly smaller for mobile */
     }
 
     .dropdown-content a {
         font-size: 1.1rem;
-        /* Slightly smaller for mobile */
+    }
+}
+
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* Hero Section */
+.hero {
+    background-color: var(--hero-bg);
+    color: #333;
+    text-align: center;
+    padding: 6rem 2rem;
+    /* More padding for premium feel */
+    margin-top: 120px;
+}
+
+.hero h1 {
+    font-family: 'Yuji Syuku', serif;
+    font-size: 3rem;
+    /* Larger for impact */
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Content Section */
+.content {
+    padding: 3rem 2rem;
+    /* More padding */
+    text-align: center;
+    background-color: var(--section-bg);
+}
+
+.content h2 {
+    font-family: 'Yuji Syuku', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+.button {
+    background-color: var(--accent-gold);
+    /* Gold for premium look */
+    color: #333;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--accent-hover);
+}
+
+/* Footer */
+footer {
+    background-color: var(--bg-primary);
+    text-align: center;
+    padding: 2rem;
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 1.3rem;
+}
+
+footer a {
+    color: var(--accent-gold);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--accent-hover);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 120px;
+        left: 0;
+        width: 100%;
+        background-color: var(--section-bg);
+        padding: 1rem;
+    }
+
+    .mobile-toggle {
+        display: block;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        display: none;
+    }
+
+    .dropdown-content.active {
+        display: block;
+    }
+
+    .hero {
+        padding: 3rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .nav-link,
+    .dropdown-toggle {
+        font-size: 1.4rem;
+    }
+
+    .dropdown-content a {
+        font-size: 1.1rem;
     }
 }
