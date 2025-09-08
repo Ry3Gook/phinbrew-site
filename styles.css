@@ -55,7 +55,7 @@ body::before {
     z-index: -1;
 }
 
-/* Header and Nav */
+/* Header (now just the image, half size) */
 header {
     background-image: url('image/sencha.jpg');
     background-size: cover;
@@ -63,9 +63,11 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
+    height: 120px;
+    /* Half the original 240px */
     z-index: 1000;
     filter: brightness(1.4);
-    /* Further lightened to show more leaves */
+    /* Lightened to show more leaves */
 }
 
 header::before {
@@ -76,87 +78,79 @@ header::before {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.1);
-    /* Even lighter overlay for visibility */
+    /* Lighter overlay for visibility */
     z-index: 0;
 }
 
-nav {
+/* Top Nav in Body (logo left, menu next) */
+.top-nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 2rem 3rem;
-    /* More padding for taller header */
-    height: 240px;
-    /* Doubled from 120px */
-    position: relative;
+    padding: 1rem 3rem;
+    margin-top: 120px;
+    /* Push down below fixed header */
     background-color: var(--nav-backdrop);
-    /* Backdrop for nav readability */
+    /* Keep backdrop for readability */
+    z-index: 900;
+    /* Below header but above content */
 }
 
-.logo-container {
+.top-nav .logo-container {
     width: 200px;
-    /* Larger logo */
+    /* Same size as before */
     height: 120px;
-    z-index: 1;
+    margin-right: 2rem;
+    /* Space between logo and menu */
 }
 
-.logo {
+.top-nav .logo {
     width: 100%;
     height: 100%;
     object-fit: contain;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
-    /* Premium shadow */
 }
 
-.nav-links {
+.top-nav .nav-links {
     display: flex;
     gap: 3rem;
-    /* More spacing for larger header */
-    justify-content: center;
-    /* Center nav links */
-    flex-grow: 1;
-    /* Take available space */
-    z-index: 1;
+    align-items: center;
 }
 
-.nav-link {
+.top-nav .nav-link {
     color: var(--text-light);
     text-decoration: none;
     font-size: 2.2rem;
-    /* Larger text */
     font-weight: 600;
     font-family: 'Yuji Syuku', serif;
     transition: color 0.3s ease;
 }
 
-.nav-link:hover {
+.top-nav .nav-link:hover {
     color: var(--accent-gold);
 }
 
-.dropdown {
+.top-nav .dropdown {
     position: relative;
 }
 
-.dropdown-toggle {
+.top-nav .dropdown-toggle {
     color: var(--text-light);
     font-size: 2.2rem;
-    /* Larger text */
     font-weight: 600;
     font-family: 'Yuji Syuku', serif;
     cursor: pointer;
     transition: color 0.3s ease;
 }
 
-.dropdown-toggle:hover {
+.top-nav .dropdown-toggle:hover {
     color: var(--accent-gold);
 }
 
-.dropdown-content {
+.top-nav .dropdown-content {
     display: none;
     position: absolute;
     background-color: var(--section-bg);
     min-width: 240px;
-    /* Wider dropdown for larger text */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
     border-radius: 4px;
     opacity: 0;
@@ -165,35 +159,32 @@ nav {
     left: 0;
 }
 
-.dropdown:hover .dropdown-content,
-.dropdown-content.active {
+.top-nav .dropdown:hover .dropdown-content,
+.top-nav .dropdown-content.active {
     display: block;
     opacity: 1;
 }
 
-.dropdown-content a {
+.top-nav .dropdown-content a {
     color: var(--text-light);
     padding: 1rem 1.2rem;
     text-decoration: none;
     display: block;
     font-size: 1.5rem;
-    /* Larger dropdown text */
     font-weight: 400;
 }
 
-.dropdown-content a:hover {
+.top-nav .dropdown-content a:hover {
     background-color: var(--accent-hover);
 }
 
-.mobile-toggle {
+.top-nav .mobile-toggle {
     display: none;
     background: none;
     border: none;
     color: var(--text-light);
     font-size: 2.5rem;
-    /* Larger hamburger icon */
     cursor: pointer;
-    z-index: 1;
 }
 
 /* Hero Section */
@@ -202,19 +193,7 @@ nav {
     color: #333;
     text-align: center;
     padding: 6rem 2rem;
-    margin-top: 240px;
-    /* Match taller header */
-}
-
-.hero h1 {
-    font-family: 'Yuji Syuku', serif;
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
-}
-
-.hero p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+    /* No margin-top needed now, since top-nav is in body */
 }
 
 /* Content Section */
@@ -222,8 +201,7 @@ nav {
     padding: 3rem 2rem;
     text-align: center;
     background-color: var(--section-bg);
-    margin-top: 240px;
-    /* Push down below fixed header */
+    /* No margin-top, as top-nav handles spacing */
 }
 
 /* Buttons */
@@ -268,34 +246,51 @@ footer a:hover {
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-
-    .nav-links.active {
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        top: 240px;
-        /* Match taller header */
-        left: 0;
-        width: 100%;
-        background-color: var(--section-bg);
+    .top-nav {
         padding: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .mobile-toggle {
+    .top-nav .logo-container {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .top-nav .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .top-nav .nav-links.active {
+        display: flex;
+    }
+
+    .top-nav .mobile-toggle {
         display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
     }
 
-    .dropdown-content {
+    .top-nav .dropdown-content {
         position: static;
         box-shadow: none;
         display: none;
     }
 
-    .dropdown-content.active {
+    .top-nav .dropdown-content.active {
         display: block;
+    }
+
+    .nav-link,
+    .dropdown-toggle {
+        font-size: 1.8rem;
+    }
+
+    .dropdown-content a {
+        font-size: 1.3rem;
     }
 
     .hero {
@@ -306,20 +301,8 @@ footer a:hover {
         font-size: 2rem;
     }
 
-    .nav-link,
-    .dropdown-toggle {
-        font-size: 1.8rem;
-        /* Slightly smaller for mobile */
-    }
-
-    .dropdown-content a {
-        font-size: 1.3rem;
-        /* Slightly smaller for mobile */
-    }
-
     .content {
-        margin-top: 240px;
-        /* Keep push down for mobile */
+        padding: 3rem 1rem;
     }
 }
 
@@ -332,8 +315,6 @@ footer a:hover {
     text-align: center;
     padding: 8rem 2rem;
     /* Increased padding for more space */
-    margin-top: 240px;
-    /* Below fixed header */
     color: #fff;
     /* White text for contrast */
     position: relative;
