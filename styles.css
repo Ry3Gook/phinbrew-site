@@ -1,18 +1,18 @@
-/* CSS Variables for Easy Updates */
+/* CSS Variables */
 :root {
     --bg-primary: #102A0E;
     /* Deep dark green */
     --text-light: #F5F5F5;
     /* Soft white */
     --accent-green: #3A6B35;
-    /* Premium Sencha green */
+    /* Sencha green */
     --accent-hover: #5E9C5E;
     /* Hover green */
     --section-bg: #1E3A1F;
-    /* Lighter dark for sections */
+    /* Lighter dark */
 }
 
-/* Reset and Base Styles */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -24,31 +24,47 @@ body {
     background-image: url('images/dark-texture.jpg');
     background-size: cover;
     background-attachment: fixed;
-    background-blend-mode: overlay;
-    opacity: 0.9;
+    background-blend-mode: multiply;
+    /* Subtle overlay */
+    background-opacity: 0.7;
+    /* Reduced dominance */
     color: var(--text-light);
     font-family: 'Inter', sans-serif;
-    font-size: 16px;
+    font-size: 1.1rem;
+    /* Larger for readability */
     line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Navigation */
-nav {
+/* Header and Nav */
+header {
     background-color: var(--bg-primary);
     position: fixed;
     top: 0;
     width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
     z-index: 1000;
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    height: 80px;
+    /* Taller for balance */
+}
+
+.logo-container {
+    max-width: 150px;
+    /* Limit logo size */
+}
+
 .logo {
-    font-family: 'Yuji Syuku', serif;
-    font-size: 1.5rem;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .dropdown {
@@ -60,7 +76,8 @@ nav {
     border: none;
     color: var(--text-light);
     font-family: 'Inter', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    /* Larger nav text */
     cursor: pointer;
 }
 
@@ -68,11 +85,13 @@ nav {
     display: none;
     position: absolute;
     background-color: var(--section-bg);
-    min-width: 160px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     border-radius: 4px;
     opacity: 0;
     transition: opacity 0.3s ease;
+    top: 100%;
+    left: 0;
 }
 
 .dropdown:hover .dropdown-content,
@@ -83,14 +102,20 @@ nav {
 
 .dropdown-content a {
     color: var(--text-light);
-    padding: 12px 16px;
+    padding: 0.8rem 1rem;
     text-decoration: none;
     display: block;
-    border-bottom: 1px solid var(--accent-green);
+    font-size: 1rem;
+    /* Readable */
 }
 
 .dropdown-content a:hover {
     background-color: var(--accent-hover);
+}
+
+.submenu {
+    padding-left: 1.5rem;
+    /* Indent sub-items */
 }
 
 .mobile-toggle {
@@ -106,19 +131,33 @@ nav {
 .hero {
     background-color: var(--section-bg);
     text-align: center;
-    padding: 4rem 2rem;
-    margin-top: 60px;
+    padding: 6rem 2rem 4rem;
+    /* Adjusted for header */
+    margin-top: 80px;
+    /* Avoid overlap */
 }
 
 .hero h1 {
     font-family: 'Yuji Syuku', serif;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     margin-bottom: 1rem;
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 1.5rem;
+}
+
+/* Content Section */
+.content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.content h2 {
+    font-family: 'Yuji Syuku', serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 /* Buttons */
@@ -129,6 +168,7 @@ nav {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 1rem;
     transition: background-color 0.3s ease;
 }
 
@@ -142,6 +182,8 @@ nav {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .card {
@@ -164,6 +206,7 @@ nav {
 
 .card h3 {
     font-family: 'Yuji Syuku', serif;
+    font-size: 1.5rem;
     margin: 0.5rem 0;
 }
 
@@ -175,6 +218,7 @@ nav {
 
 .contact h2 {
     font-family: 'Yuji Syuku', serif;
+    font-size: 2rem;
     margin-bottom: 1.5rem;
 }
 
@@ -191,9 +235,10 @@ textarea {
     background-color: var(--bg-primary);
     color: var(--text-light);
     border: 1px solid var(--accent-green);
-    padding: 0.5rem;
+    padding: 0.8rem;
     border-radius: 4px;
     font-family: 'Inter', sans-serif;
+    font-size: 1rem;
 }
 
 input:focus,
@@ -204,13 +249,44 @@ textarea:focus {
 
 textarea {
     resize: vertical;
-    min-height: 100px;
+    min-height: 120px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--bg-primary);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+    /* Push to bottom */
+}
+
+footer p {
+    font-size: 1rem;
+    /* Larger footer text */
+}
+
+footer a {
+    color: var(--accent-green);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--accent-hover);
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     body {
-        font-size: 18px;
+        font-size: 1.2rem;
+    }
+
+    .hero {
+        padding: 4rem 1rem 2rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
     }
 
     .mobile-toggle {
@@ -223,10 +299,12 @@ textarea {
 
     .dropdown-content {
         position: fixed;
-        top: 60px;
+        top: 80px;
         left: 0;
         width: 100%;
-        height: 100vh;
+        height: auto;
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
     }
 
     .grid-container {

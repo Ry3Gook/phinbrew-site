@@ -12,27 +12,55 @@
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">Phinbrew</div>
-        <div class="dropdown">
-            <button class="dropdown-toggle">Menu</button>
-            <div class="dropdown-content">
-                <a href="#">Tea</a>
-                <a href="#">Accessories</a>
-                <a href="#">Traditional Incense</a>
-                <a href="#">Blog</a>
-                <a href="#">About</a>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="images/logo.png" alt="Phinbrew Logo" class="logo">
             </div>
-        </div>
-        <button class="mobile-toggle">☰</button>
-    </nav>
+            <div class="dropdown">
+                <button class="dropdown-toggle">Menu</button>
+                <div class="dropdown-content">
+                    <a href="#">Tea</a>
+                    <div class="submenu">
+                        <a href="#">Green Tea</a>
+                        <a href="#">Black Tea</a>
+                        <a href="#">Oolong Tea</a>
+                        <a href="#">Medicinal Tea and Herbs</a>
+                        <a href="#">Herbal Tea</a>
+                    </div>
+                    <a href="#">Accessories</a>
+                    <div class="submenu">
+                        <a href="#">Tea Accessories</a>
+                        <a href="#">Coffee Accessories</a>
+                    </div>
+                    <a href="#">Traditional Incense</a>
+                    <div class="submenu">
+                        <a href="#">Chinese Incense</a>
+                        <a href="#">Japanese Incense</a>
+                        <a href="#">Indian Incense</a>
+                        <a href="#">Incense Accessories</a>
+                    </div>
+                    <a href="#">Blog</a>
+                    <a href="#">About</a>
+                </div>
+            </div>
+            <button class="mobile-toggle">☰</button>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <h1>Discover Premium Sencha</h1>
         <p>Elevate your tea experience with authentic Japanese craftsmanship.</p>
         <button class="button">Shop Now</button>
+    </section>
+
+    <!-- Black Tea Section -->
+    <section class="content">
+        <h2>Black Tea</h2>
+        <p>Discover our rich black teas, sourced for bold flavor and quality.</p>
+        <button class="button">Shop Black Tea</button>
     </section>
 
     <!-- Product Grid -->
@@ -51,7 +79,7 @@
         </div>
     </section>
 
-    <!-- Contact Form (Netlify) -->
+    <!-- Contact Form -->
     <section class="contact">
         <h2>Contact Us</h2>
         <form name="contact" method="POST" data-netlify="true">
@@ -62,6 +90,12 @@
             <button type="submit" class="button">Send</button>
         </form>
     </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Follow us: <a href="#">X</a> | <a href="#">Instagram</a></p>
+        <p>&copy; 2025 Phinbrew</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
