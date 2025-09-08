@@ -316,3 +316,172 @@ footer a:hover {
         /* Keep push down for mobile */
     }
 }
+
+/* About Page Specific Styles */
+.about-hero {
+    background-image: url('https://via.placeholder.com/1920x400?text=Tea+Background');
+    /* Replace with your tea-themed image */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 6rem 2rem;
+    margin-top: 240px;
+    /* Below fixed header */
+    color: #fff;
+    /* White text for contrast */
+    position: relative;
+}
+
+.about-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Overlay for readability */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-family: 'Yuji Syuku', serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: var(--section-bg);
+    /* Default green */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.about-section:hover {
+    transform: translateY(-5px);
+    /* Subtle hover lift */
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.alternate-bg {
+    background-color: #F8F1E9;
+    /* Off-white for contrast, like hero */
+    color: #333;
+    /* Dark text for readability */
+}
+
+.text-block {
+    flex: 1;
+}
+
+.text-block p {
+    margin-bottom: 1rem;
+}
+
+.text-block blockquote {
+    font-style: italic;
+    border-left: 4px solid var(--accent-gold);
+    padding-left: 1rem;
+    margin: 1rem 0;
+    color: var(--accent-gold);
+}
+
+.values-list {
+    list-style: none;
+    padding: 0;
+}
+
+.values-list li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.values-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent-gold);
+}
+
+.image-block {
+    flex: 1;
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cta-section {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: var(--accent-gold);
+    color: #333;
+    margin-bottom: 3rem;
+}
+
+.cta-button {
+    background-color: #fff;
+    color: var(--bg-primary);
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--accent-hover);
+    color: #fff;
+}
+
+/* Mobile Responsiveness for About Page */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+    }
+
+    .flex-row-reverse {
+        flex-direction: column;
+    }
+
+    .about-hero {
+        padding: 3rem 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+}
