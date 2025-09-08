@@ -2,8 +2,8 @@
 :root {
     --bg-primary: #1A3C1A;
     /* Subtle green */
-    --body-bg: #F5F3EF;
-    /* Light cream/beige for body contrast */
+    --body-bg: #EDE4D3;
+    /* Cream/beige bamboo-inspired color for body contrast */
     --text-light: #F5F5F5;
     /* Soft white */
     --accent-gold: #D4A017;
@@ -27,7 +27,7 @@
 
 body {
     background-color: var(--body-bg);
-    /* Lighter cream/beige background */
+    /* Updated cream/beige bamboo color */
     color: var(--text-light);
     font-family: 'Inter', sans-serif;
     font-size: 1.2rem;
@@ -64,8 +64,8 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
-    filter: brightness(1.2);
-    /* Lighten the image to show more leaves */
+    filter: brightness(1.4);
+    /* Further lightened to show more leaves */
 }
 
 header::before {
@@ -75,8 +75,8 @@ header::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
-    /* Lighter overlay for less darkness */
+    background-color: rgba(0, 0, 0, 0.1);
+    /* Even lighter overlay for visibility */
     z-index: 0;
 }
 
