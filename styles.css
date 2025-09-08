@@ -21,20 +21,30 @@
 
 body {
     background-color: var(--bg-primary);
-    background-image: url('images/dark-texture.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-    background-blend-mode: multiply;
-    background-opacity: 0.5;
-    /* Very subtle */
     color: var(--text-light);
     font-family: 'Inter', sans-serif;
     font-size: 1.2rem;
-    /* Larger text */
     line-height: 1.6;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/dark-texture.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    opacity: 0.5;
+    z-index: -1;
 }
 
 /* Header and Nav */
@@ -56,7 +66,6 @@ nav {
 
 .logo-container {
     width: 100px;
-    /* Strict logo size */
     height: 50px;
 }
 
@@ -64,7 +73,6 @@ nav {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    /* Prevent stretching */
 }
 
 .nav-links {
@@ -134,7 +142,6 @@ nav {
     text-align: center;
     padding: 5rem 2rem;
     margin-top: 70px;
-    /* Clear header */
 }
 
 .hero h1 {
@@ -185,7 +192,6 @@ footer {
 
 footer p {
     font-size: 1.2rem;
-    /* Larger footer text */
 }
 
 footer a {
@@ -221,6 +227,11 @@ footer a:hover {
     .dropdown-content {
         position: static;
         box-shadow: none;
+        display: none;
+    }
+
+    .dropdown-content.active {
+        display: block;
     }
 
     .hero {
