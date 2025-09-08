@@ -17,6 +17,8 @@ body {
     padding: 0;
     color: #333;
     background-color: #F5F5DC;
+    position: relative;
+    /* Ensure body doesn't interfere with dropdowns */
 }
 
 /* Preloader */
@@ -30,7 +32,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 2000;
+    /* Higher than dropdowns */
     transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
@@ -67,9 +70,8 @@ header {
     align-items: center;
     padding: 20px 40px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    /* Removed overflow: hidden to prevent clipping dropdowns */
     z-index: 100;
-    /* Ensure header is above body content */
+    /* Below nav but above main content */
 }
 
 header::before {
@@ -98,7 +100,8 @@ header::after {
 .logo {
     text-align: center;
     flex: 0 0 auto;
-    z-index: 1;
+    z-index: 101;
+    /* Above header pseudo-elements */
 }
 
 .logo img {
@@ -114,8 +117,8 @@ nav {
     justify-content: center;
     flex-grow: 1;
     gap: 60px;
-    z-index: 101;
-    /* Above header to ensure dropdowns are visible */
+    z-index: 102;
+    /* Above header */
 }
 
 nav a {
@@ -156,15 +159,18 @@ nav a:hover {
     display: none;
     position: absolute;
     background-color: #FFF8E1;
-    min-width: 250px;
+    min-width: 300px;
+    /* Wider for long items like "Medicinal Tea and Herbs" */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
-    z-index: 102;
-    /* Higher than nav to appear above other elements */
+    z-index: 103;
+    /* Above nav and header */
     top: 100%;
+    /* Position below main nav item */
     left: 0;
     padding: 10px 0;
-    /* Add padding for better spacing */
+    overflow: visible;
+    /* Ensure no clipping */
 }
 
 .dropdown-menu a {
@@ -173,7 +179,7 @@ nav a:hover {
     color: #333;
     text-decoration: none;
     font-size: 1.5em;
-    /* Smaller font for submenus */
+    /* Smaller than main nav (2.5em) */
     font-family: 'Yuji Syuku', Arial, sans-serif;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -197,7 +203,7 @@ nav a:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 1;
-    /* Ensure sections are below nav */
+    /* Below nav */
 }
 
 .section h3 {
@@ -304,7 +310,7 @@ footer {
         background-color: #FFF8E1;
         margin-bottom: 15px;
         box-shadow: none;
-        /* Remove shadow for mobile to blend better */
+        z-index: 103;
     }
 
     .dropdown-menu a {
