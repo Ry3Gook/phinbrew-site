@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
     const mobileToggle = document.querySelector('.mobile-toggle');
-    const dropdownContent = document.querySelector('.dropdown-content');
+    const navLinks = document.querySelector('.nav-links');
 
-    if (mobileToggle && dropdownContent) {
+    if (mobileToggle && navLinks) {
         mobileToggle.addEventListener('click', function () {
-            dropdownContent.classList.toggle('active');
+            navLinks.classList.toggle('active');
         });
     }
 });
