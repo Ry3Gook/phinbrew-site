@@ -1,35 +1,10 @@
-// Preloader
-window.addEventListener('load', () => {
-    const preloader = document.querySelector('.preloader');
-    if (preloader) {
-        preloader.classList.add('hidden');
-    }
-});
+document.addEventListener('DOMContentLoaded', function () {
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const dropdownContent = document.querySelector('.dropdown-content');
 
-// Fallback: Hide preloader after 5 seconds
-setTimeout(() => {
-    const preloader = document.querySelector('.preloader');
-    if (preloader) {
-        preloader.classList.add('hidden');
-    }
-}, 5000);
-
-// Dropdown Toggle for Mobile
-document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-    toggle.addEventListener('click', (e) => {
-        if (window.innerWidth <= 768) {
-            e.preventDefault();
-            const dropdownMenu = toggle.nextElementSibling;
-            dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
-        }
-    });
-});
-
-// Close dropdowns when clicking outside
-document.addEventListener('click', (e) => {
-    if (window.innerWidth <= 768 && !e.target.closest('.dropdown')) {
-        document.querySelectorAll('.dropdown-menu').forEach(menu => {
-            menu.style.display = 'none';
+    if (mobileToggle && dropdownContent) {
+        mobileToggle.addEventListener('click', function () {
+            dropdownContent.classList.toggle('active');
         });
     }
 });

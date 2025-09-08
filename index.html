@@ -4,71 +4,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Phinbrew offers premium Japanese teas, coffee accessories, and traditional incense. Join our community for exclusive offers!">
-    <meta name="keywords" content="Phinbrew, Japanese tea, coffee accessories, traditional incense">
-    <meta name="author" content="Phinbrew">
-    <title>Phinbrew - Tea & Accessories</title>
+    <meta name="description" content="Premium Sencha tea and accessories at Phinbrew">
+    <title>Phinbrew - Premium Sencha Tea & Accessories</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Yuji+Syuku&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="image/favicon.png">
 </head>
 
 <body>
-    <div class="preloader">
-        <div class="spinner"></div>
-    </div>
-    <header>
-        <div class="logo">
-            <img src="image/phinbrew-logo.webp" alt="Phinbrew Logo"
-                onerror="this.src='https://via.placeholder.com/100x40?text=Phinbrew+Logo';">
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Phinbrew</div>
+        <div class="dropdown">
+            <button class="dropdown-toggle">Menu</button>
+            <div class="dropdown-content">
+                <a href="#">Tea</a>
+                <a href="#">Accessories</a>
+                <a href="#">Traditional Incense</a>
+                <a href="#">Blog</a>
+                <a href="#">About</a>
+            </div>
         </div>
-        <nav aria-label="Main navigation">
-            <div class="dropdown">
-                <a href="index.html" class="dropdown-toggle">Tea</a>
-                <div class="dropdown-menu">
-                    <a href="green-tea.html">Green Tea</a>
-                    <a href="black-tea.html">Black Tea</a>
-                    <a href="oolong-tea.html">Oolong Tea</a>
-                    <a href="medicinal-tea.html">Medicinal Tea and Herbs</a>
-                    <a href="herbal-tea.html">Herbal Tea</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <a href="shop.html" class="dropdown-toggle">Accessories</a>
-                <div class="dropdown-menu">
-                    <a href="tea-accessories.html">Tea Accessories</a>
-                    <a href="coffee-accessories.html">Coffee Accessories</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <a href="contact.html" class="dropdown-toggle">Traditional Incense</a>
-                <div class="dropdown-menu">
-                    <a href="chinese-incense.html">Chinese Incense</a>
-                    <a href="japanese-incense.html">Japanese Incense</a>
-                    <a href="indian-incense.html">Indian Incense</a>
-                    <a href="incense-accessories.html">Incense Accessories</a>
-                </div>
-            </div>
-            <a href="blog.html">Blog</a>
-            <a href="about.html">About</a>
-        </nav>
-    </header>
-    <main>
-        <section class="section" id="home">
-            <h3>Welcome to Phinbrew</h3>
-            <p>Discover the art of Japanese tea brewing and premium accessories. Explore our hand-picked teas, coffee
-                tools, and traditional incense to elevate your daily rituals.</p>
-            <p><a href="shop.html" class="shop-now">Shop Now</a> and join our community for 10% off your first order!
-            </p>
-        </section>
-    </main>
-    <footer id="contact">
-        <p>Follow us:
-            <a class="social-links" href="https://x.com/phinbrew" target="_blank">X</a> |
-            <a class="social-links" href="https://instagram.com/phinbrew" target="_blank">Instagram</a>
-        </p>
-        <p>&copy; 2025 Phinbrew</p>
-    </footer>
+        <button class="mobile-toggle">☰</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Discover Premium Sencha</h1>
+        <p>Elevate your tea experience with authentic Japanese craftsmanship.</p>
+        <button class="button">Shop Now</button>
+    </section>
+
+    <!-- Product Grid -->
+    <section class="grid-container">
+        <div class="card">
+            <img src="images/tea1.jpg" alt="Sencha Tea" loading="lazy">
+            <h3>Sencha Classic</h3>
+            <p>Rich, vibrant green tea.</p>
+            <button class="button">View Details</button>
+        </div>
+        <div class="card">
+            <img src="images/tea2.jpg" alt="Matcha Tea" loading="lazy">
+            <h3>Matcha Premium</h3>
+            <p>Smooth, ceremonial-grade matcha.</p>
+            <button class="button">View Details</button>
+        </div>
+    </section>
+
+    <!-- Contact Form (Netlify) -->
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <form name="contact" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="button">Send</button>
+        </form>
+    </section>
+
     <script src="script.js"></script>
 </body>
 
