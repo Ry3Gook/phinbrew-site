@@ -78,17 +78,19 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 3rem;
-    /* More padding for premium feel */
-    height: 120px;
+    padding: 2rem 3rem;
+    /* More padding for taller header */
+    height: 240px;
+    /* Doubled from 120px */
     position: relative;
     background-color: var(--nav-backdrop);
     /* Backdrop for nav readability */
 }
 
 .logo-container {
-    width: 150px;
-    height: 80px;
+    width: 200px;
+    /* Larger logo */
+    height: 120px;
     z-index: 1;
 }
 
@@ -97,13 +99,13 @@ nav {
     height: 100%;
     object-fit: contain;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
-    /* Subtle shadow for premium look */
+    /* Premium shadow */
 }
 
 .nav-links {
     display: flex;
-    gap: 2.5rem;
-    /* More spacing */
+    gap: 3rem;
+    /* More spacing for larger header */
     justify-content: center;
     /* Center nav links */
     flex-grow: 1;
@@ -114,12 +116,10 @@ nav {
 .nav-link {
     color: var(--text-light);
     text-decoration: none;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     /* Larger text */
     font-weight: 600;
-    /* Bolder for premium feel */
     font-family: 'Yuji Syuku', serif;
-    /* Elegant font */
     transition: color 0.3s ease;
 }
 
@@ -133,7 +133,8 @@ nav {
 
 .dropdown-toggle {
     color: var(--text-light);
-    font-size: 1.8rem;
+    font-size: 2.2rem;
+    /* Larger text */
     font-weight: 600;
     font-family: 'Yuji Syuku', serif;
     cursor: pointer;
@@ -148,7 +149,8 @@ nav {
     display: none;
     position: absolute;
     background-color: var(--section-bg);
-    min-width: 220px;
+    min-width: 240px;
+    /* Wider dropdown for larger text */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
     border-radius: 4px;
     opacity: 0;
@@ -168,7 +170,8 @@ nav {
     padding: 1rem 1.2rem;
     text-decoration: none;
     display: block;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    /* Larger dropdown text */
     font-weight: 400;
 }
 
@@ -176,61 +179,13 @@ nav {
     background-color: var(--accent-hover);
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-
-    .nav-links.active {
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        top: 120px;
-        left: 0;
-        width: 100%;
-        background-color: var(--section-bg);
-        padding: 1rem;
-    }
-
-    .mobile-toggle {
-        display: block;
-    }
-
-    .dropdown-content {
-        position: static;
-        box-shadow: none;
-        display: none;
-    }
-
-    .dropdown-content.active {
-        display: block;
-    }
-
-    .hero {
-        padding: 3rem 1rem;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .nav-link,
-    .dropdown-toggle {
-        font-size: 1.4rem;
-    }
-
-    .dropdown-content a {
-        font-size: 1.1rem;
-    }
-}
-
 .mobile-toggle {
     display: none;
     background: none;
     border: none;
     color: var(--text-light);
-    font-size: 2rem;
+    font-size: 2.5rem;
+    /* Larger hamburger icon */
     cursor: pointer;
     z-index: 1;
 }
@@ -241,14 +196,13 @@ nav {
     color: #333;
     text-align: center;
     padding: 6rem 2rem;
-    /* More padding for premium feel */
-    margin-top: 120px;
+    margin-top: 240px;
+    /* Match taller header */
 }
 
 .hero h1 {
     font-family: 'Yuji Syuku', serif;
     font-size: 3rem;
-    /* Larger for impact */
     margin-bottom: 1.5rem;
 }
 
@@ -260,7 +214,6 @@ nav {
 /* Content Section */
 .content {
     padding: 3rem 2rem;
-    /* More padding */
     text-align: center;
     background-color: var(--section-bg);
 }
@@ -274,7 +227,6 @@ nav {
 /* Buttons */
 .button {
     background-color: var(--accent-gold);
-    /* Gold for premium look */
     color: #333;
     padding: 1rem 2rem;
     border: none;
@@ -320,7 +272,8 @@ footer a:hover {
         display: flex;
         flex-direction: column;
         position: fixed;
-        top: 120px;
+        top: 240px;
+        /* Match taller header */
         left: 0;
         width: 100%;
         background-color: var(--section-bg);
@@ -351,10 +304,12 @@ footer a:hover {
 
     .nav-link,
     .dropdown-toggle {
-        font-size: 1.4rem;
+        font-size: 1.8rem;
+        /* Slightly smaller for mobile */
     }
 
     .dropdown-content a {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
+        /* Slightly smaller for mobile */
     }
 }
