@@ -4,83 +4,266 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Phinbrew's blog on tea, wellness, and rituals.">
-    <title>Blog - Phinbrew</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Yuji+Syuku&display=swap"
+    <meta name="description"
+        content="Phinbrew Journal - Explore articles on tea benefits, wellness rituals, and mindful living through premium Japanese tea culture.">
+    <title>Journal - Phinbrew</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="image/favicon.png">
 </head>
 
 <body>
-    <header>
-        <!-- Header is now just the fixed background image; no content needed here -->
-    </header>
-    <nav class="top-nav">
-        <div class="logo-container">
-            <img src="image/phinbrew-logo.webp" alt="Phinbrew Logo" class="logo">
+    <!-- Premium Navigation -->
+    <nav class="premium-nav">
+        <div class="nav-container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="image/phinbrew-logo.webp" alt="Phinbrew" class="logo">
+                </a>
+            </div>
+
+            <div class="nav-menu">
+                <div class="nav-dropdown">
+                    <span class="nav-item">Tea Collection</span>
+                    <div class="dropdown-menu">
+                        <a href="green-tea.html" class="dropdown-link">Green Tea</a>
+                        <a href="black-tea.html" class="dropdown-link">Black Tea</a>
+                        <a href="oolong-tea.html" class="dropdown-link">Oolong Tea</a>
+                        <a href="medicinal-tea.html" class="dropdown-link">Medicinal Herbs</a>
+                        <a href="herbal-tea.html" class="dropdown-link">Herbal Tea</a>
+                    </div>
+                </div>
+
+                <div class="nav-dropdown">
+                    <span class="nav-item">Accessories</span>
+                    <div class="dropdown-menu">
+                        <a href="tea-accessories.html" class="dropdown-link">Tea Accessories</a>
+                        <a href="coffee-accessories.html" class="dropdown-link">Coffee Accessories</a>
+                    </div>
+                </div>
+
+                <div class="nav-dropdown">
+                    <span class="nav-item">Incense</span>
+                    <div class="dropdown-menu">
+                        <a href="japanese-incense.html" class="dropdown-link">Japanese Incense</a>
+                        <a href="chinese-incense.html" class="dropdown-link">Chinese Incense</a>
+                        <a href="indian-incense.html" class="dropdown-link">Indian Incense</a>
+                        <a href="incense-accessories.html" class="dropdown-link">Accessories</a>
+                    </div>
+                </div>
+
+                <a href="about.html" class="nav-item">About</a>
+                <a href="blog.html" class="nav-item">Journal</a>
+            </div>
+
+            <button class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-        <div class="nav-links">
-            <div class="dropdown">
-                <span class="dropdown-toggle">Tea</span>
-                <div class="dropdown-content">
-                    <a href="green-tea.html">Green Tea</a>
-                    <a href="black-tea.html">Black Tea</a>
-                    <a href="oolong-tea.html">Oolong Tea</a>
-                    <a href="medicinal-tea.html">Medicinal Tea and Herbs</a>
-                    <a href="herbal-tea.html">Herbal Tea</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <span class="dropdown-toggle">Accessories</span>
-                <div class="dropdown-content">
-                    <a href="tea-accessories.html">Tea Accessories</a>
-                    <a href="coffee-accessories.html">Coffee Accessories</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <span class="dropdown-toggle">Traditional Incense</span>
-                <div class="dropdown-content">
-                    <a href="chinese-incense.html">Chinese Incense</a>
-                    <a href="japanese-incense.html">Japanese Incense</a>
-                    <a href="indian-incense.html">Indian Incense</a>
-                    <a href="incense-accessories.html">Incense Accessories</a>
-                </div>
-            </div>
-            <a href="blog.html" class="nav-link">Blog</a>
-            <a href="about.html" class="nav-link">About</a>
-        </div>
-        <button class="mobile-toggle">☰</button>
     </nav>
 
-    <main>
-        <section class="content">
-            <h2>Phinbrew Blog</h2>
-            <p>Explore articles on tea benefits, rituals, and wellness tips.</p>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-background">
+            <img src="image/tea-party-ritual.webp" alt="Phinbrew Journal - Tea Wisdom" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
 
-            <!-- Add blog posts -->
-            <div class="blog-grid">
-                <div class="blog-post">
-                    <h3>The Benefits of Sencha Tea</h3>
-                    <p>Discover how antioxidants in sencha can boost your health and focus. (Published: Sept 2025)</p>
-                    <a href="blog-post1.html" class="button">Read More</a>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">The Phinbrew <span class="accent-text">Journal</span></h1>
+                <p class="hero-subtitle">Explore articles on tea benefits, wellness rituals, and mindful living through
+                    the wisdom of traditional Japanese tea culture.</p>
+                <div class="hero-actions">
+                    <a href="#articles" class="btn-primary">Read Articles</a>
+                    <a href="shop.html" class="btn-secondary">Shop Tea</a>
                 </div>
-                <div class="blog-post">
-                    <h3>Incense Rituals for Mindfulness</h3>
-                    <p>Learn traditional ways to incorporate incense into your daily routine. (Published: Aug 2025)</p>
-                    <a href="blog-post2.html" class="button">Read More</a>
-                </div>
-                <!-- Add more or a "Coming Soon" message -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Articles Section -->
+    <section class="featured-collections" id="articles">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Latest Articles</h2>
+                <p class="section-subtitle">Discover the wisdom of tea, wellness insights, and mindful living practices
+                </p>
             </div>
 
-            <p>Stay tuned for more updates!</p>
-        </section>
-    </main>
+            <div class="collections-grid">
+                <div class="collection-card premium">
+                    <div class="card-image">
+                        <img src="image/sencha.jpg" alt="The Benefits of Sencha Tea">
+                        <div class="card-overlay">
+                            <span class="collection-badge">Featured</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">The Benefits of Sencha Tea</h3>
+                        <p class="card-description">Discover how antioxidants in sencha can boost your health, enhance
+                            focus, and support overall wellness through daily tea rituals.</p>
+                        <div style="margin-bottom: 1rem; color: var(--text-light); font-size: 0.9rem;">Published:
+                            September 2025</div>
+                        <a href="#" class="card-link">Read Full Article →</a>
+                    </div>
+                </div>
 
-    <footer>
-        <p>Follow us: <a href="https://x.com/phinbrew" target="_blank">X</a> | <a href="https://instagram.com/phinbrew"
-                target="_blank">Instagram</a></p>
-        <p>&copy; 2025 Phinbrew</p>
+                <div class="collection-card">
+                    <div class="card-image">
+                        <img src="image/japanese-tea-farm.jpg" alt="Incense Rituals for Mindfulness">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Incense Rituals for Mindfulness</h3>
+                        <p class="card-description">Learn traditional ways to incorporate incense into your daily
+                            routine for enhanced meditation and mindful moments.</p>
+                        <div style="margin-bottom: 1rem; color: var(--text-light); font-size: 0.9rem;">Published: August
+                            2025</div>
+                        <a href="#" class="card-link">Read Full Article →</a>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <div class="card-image">
+                        <img src="image/tea-party-ritual.webp" alt="The Art of Tea Ceremony">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">The Art of Tea Ceremony</h3>
+                        <p class="card-description">Explore the meditative practice of Japanese tea ceremony and how it
+                            cultivates presence, gratitude, and inner peace.</p>
+                        <div style="margin-bottom: 1rem; color: var(--text-light); font-size: 0.9rem;">Coming Soon</div>
+                        <a href="#" class="card-link">Coming Soon →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tea Wisdom Section -->
+    <section class="philosophy-section">
+        <div class="container">
+            <div class="philosophy-content">
+                <div class="philosophy-text">
+                    <h2 class="philosophy-title">Tea Wisdom & Wellness</h2>
+                    <p class="philosophy-quote">"In every cup of tea lies a moment of mindfulness, a pause for
+                        reflection, and a connection to ancient wisdom."</p>
+                    <p class="philosophy-description">Our journal explores the intersection of traditional tea culture
+                        and modern wellness. From the science behind green tea's health benefits to the meditative
+                        aspects of tea ceremony, we share insights that help you cultivate a more mindful, healthy
+                        lifestyle through the simple act of drinking tea.</p>
+                    <a href="about.html" class="btn-outline">Learn Our Story</a>
+                </div>
+                <div class="philosophy-image">
+                    <img src="image/riley-japan.jpg" alt="Tea Wisdom">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="featured-collections">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Explore by Category</h2>
+                <p class="section-subtitle">Find articles that match your interests and wellness journey</p>
+            </div>
+
+            <div class="collections-grid">
+                <div class="collection-card">
+                    <div class="card-image">
+                        <img src="image/sencha.jpg" alt="Health & Wellness">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Health & Wellness</h3>
+                        <p class="card-description">Scientific insights into tea's health benefits, from antioxidants to
+                            mental clarity and physical wellness.</p>
+                        <a href="#" class="card-link">Explore Wellness →</a>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <div class="card-image">
+                        <img src="image/tea-party-ritual.webp" alt="Mindful Living">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Mindful Living</h3>
+                        <p class="card-description">Practices and rituals that bring mindfulness into daily life through
+                            tea ceremony and meditation.</p>
+                        <a href="#" class="card-link">Explore Mindfulness →</a>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <div class="card-image">
+                        <img src="image/japanese-tea-farm.jpg" alt="Tea Culture">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Tea Culture</h3>
+                        <p class="card-description">Stories from tea origins, traditional practices, and the cultural
+                            significance of tea around the world.</p>
+                        <a href="#" class="card-link">Explore Culture →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2 class="newsletter-title">Stay Updated</h2>
+                <p class="newsletter-subtitle">Get the latest articles, tea wisdom, and wellness tips delivered to your
+                    inbox</p>
+                <form class="newsletter-form" action="success.html" method="GET">
+                    <input type="email" placeholder="Enter your email address" class="newsletter-input" required>
+                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Footer -->
+    <footer class="premium-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="image/phinbrew-logo.webp" alt="Phinbrew" class="footer-logo">
+                    <p class="footer-tagline">Elevating tea culture through authentic Japanese traditions</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-title">Collections</h4>
+                        <a href="green-tea.html" class="footer-link">Green Tea</a>
+                        <a href="black-tea.html" class="footer-link">Black Tea</a>
+                        <a href="tea-accessories.html" class="footer-link">Accessories</a>
+                        <a href="japanese-incense.html" class="footer-link">Incense</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-title">Company</h4>
+                        <a href="about.html" class="footer-link">About Us</a>
+                        <a href="blog.html" class="footer-link">Journal</a>
+                        <a href="contact.html" class="footer-link">Contact</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-title">Connect</h4>
+                        <a href="https://instagram.com/phinbrew" target="_blank" class="footer-link">Instagram</a>
+                        <a href="https://x.com/phinbrew" target="_blank" class="footer-link">Twitter</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 Phinbrew. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
