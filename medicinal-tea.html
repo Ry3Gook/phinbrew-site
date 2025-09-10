@@ -4,67 +4,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Therapeutic medicinal teas and herbs at Phinbrew.">
-    <title>Medicinal Tea and Herbs - Phinbrew</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Yuji+Syuku&display=swap"
+    <meta name="description"
+        content="Premium medicinal teas and herbs at Phinbrew - Discover therapeutic blends for wellness, immunity, and natural healing.">
+    <title>Medicinal Tea & Herbs Collection - Phinbrew</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="image/favicon.png">
 </head>
 
 <body>
-    <header>
-        <!-- Header is now just the fixed background image; no content needed here -->
-    </header>
-    <nav class="top-nav">
-        <div class="logo-container">
-            <img src="image/phinbrew-logo.webp" alt="Phinbrew Logo" class="logo">
+    <!-- Premium Navigation -->
+    <nav class="premium-nav">
+        <div class="nav-container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="image/phinbrew-logo.webp" alt="Phinbrew" class="logo">
+                </a>
+            </div>
+
+            <div class="nav-menu">
+                <div class="nav-dropdown">
+                    <span class="nav-item">Tea Collection</span>
+                    <div class="dropdown-menu">
+                        <a href="green-tea.html" class="dropdown-link">Green Tea</a>
+                        <a href="black-tea.html" class="dropdown-link">Black Tea</a>
+                        <a href="oolong-tea.html" class="dropdown-link">Oolong Tea</a>
+                        <a href="medicinal-tea.html" class="dropdown-link">Medicinal Herbs</a>
+                        <a href="herbal-tea.html" class="dropdown-link">Herbal Tea</a>
+                    </div>
+                </div>
+
+                <div class="nav-dropdown">
+                    <span class="nav-item">Accessories</span>
+                    <div class="dropdown-menu">
+                        <a href="tea-accessories.html" class="dropdown-link">Tea Accessories</a>
+                        <a href="coffee-accessories.html" class="dropdown-link">Coffee Accessories</a>
+                    </div>
+                </div>
+
+                <div class="nav-dropdown">
+                    <span class="nav-item">Incense</span>
+                    <div class="dropdown-menu">
+                        <a href="japanese-incense.html" class="dropdown-link">Japanese Incense</a>
+                        <a href="chinese-incense.html" class="dropdown-link">Chinese Incense</a>
+                        <a href="indian-incense.html" class="dropdown-link">Indian Incense</a>
+                        <a href="incense-accessories.html" class="dropdown-link">Accessories</a>
+                    </div>
+                </div>
+
+                <a href="about.html" class="nav-item">About</a>
+                <a href="blog.html" class="nav-item">Journal</a>
+            </div>
+
+            <button class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-        <div class="nav-links">
-            <div class="dropdown">
-                <span class="dropdown-toggle">Tea</span>
-                <div class="dropdown-content">
-                    <a href="green-tea.html">Green Tea</a>
-                    <a href="black-tea.html">Black Tea</a>
-                    <a href="oolong-tea.html">Oolong Tea</a>
-                    <a href="medicinal-tea.html">Medicinal Tea and Herbs</a>
-                    <a href="herbal-tea.html">Herbal Tea</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <span class="dropdown-toggle">Accessories</span>
-                <div class="dropdown-content">
-                    <a href="tea-accessories.html">Tea Accessories</a>
-                    <a href="coffee-accessories.html">Coffee Accessories</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <span class="dropdown-toggle">Traditional Incense</span>
-                <div class="dropdown-content">
-                    <a href="chinese-incense.html">Chinese Incense</a>
-                    <a href="japanese-incense.html">Japanese Incense</a>
-                    <a href="indian-incense.html">Indian Incense</a>
-                    <a href="incense-accessories.html">Incense Accessories</a>
-                </div>
-            </div>
-            <a href="blog.html" class="nav-link">Blog</a>
-            <a href="about.html" class="nav-link">About</a>
-        </div>
-        <button class="mobile-toggle">☰</button>
     </nav>
 
-    <main>
-        <section class="content">
-            <h2>Medicinal Tea and Herbs</h2>
-            <p>Therapeutic teas and herbs to support your well-being.</p>
-            <a href="shop.html" class="button">Shop Medicinal Tea</a>
-        </section>
-    </main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-background">
+            <img src="image/riley-japan.jpg" alt="Premium Medicinal Tea Collection" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
 
-    <footer>
-        <p>Follow us: <a href="https://x.com/phinbrew" target="_blank">X</a> | <a href="https://instagram.com/phinbrew"
-                target="_blank">Instagram</a></p>
-        <p>&copy; 2025 Phinbrew</p>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Healing <span class="accent-text">Medicinal Herbs</span><br>Collection</h1>
+                <p class="hero-subtitle">Discover the therapeutic power of traditional medicinal teas and herbs,
+                    carefully sourced for their healing properties and wellness benefits.</p>
+                <div class="hero-actions">
+                    <a href="shop.html" class="btn-primary">Shop Medicinal Tea</a>
+                    <a href="about.html" class="btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Medicinal Tea Collection -->
+    <section class="featured-collections">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Therapeutic Tea Varieties</h2>
+                <p class="section-subtitle">From immune-boosting blends to calming herbs, explore our curated selection
+                    of medicinal teas for natural wellness</p>
+            </div>
+
+            <div class="collections-grid">
+                <div class="collection-card premium">
+                    <div class="card-image">
+                        <img src="image/tea-party-ritual.webp" alt="Immunity Blend">
+                        <div class="card-overlay">
+                            <span class="collection-badge">Premium</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Immunity Blend</h3>
+                        <p class="card-description">A powerful combination of echinacea, elderberry, and ginger root to
+                            support natural immune function and overall vitality.</p>
+                        <a href="shop.html" class="card-link">Shop Immunity →</a>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <div class="card-image">
+                        <img src="image/japanese-tea-farm.jpg" alt="Digestive Harmony">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Digestive Harmony</h3>
+                        <p class="card-description">Soothing blend of peppermint, fennel, and chamomile to promote
+                            healthy digestion and comfort after meals.</p>
+                        <a href="shop.html" class="card-link">Shop Digestive →</a>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <div class="card-image">
+                        <img src="image/sencha.jpg" alt="Stress Relief">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Stress Relief</h3>
+                        <p class="card-description">Calming blend of ashwagandha, lemon balm, and lavender to help
+                            reduce stress and promote peaceful relaxation.</p>
+                        <a href="shop.html" class="card-link">Shop Stress Relief →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Medicinal Tea Benefits -->
+    <section class="philosophy-section">
+        <div class="container">
+            <div class="philosophy-content">
+                <div class="philosophy-text">
+                    <h2 class="philosophy-title">The Wisdom of Herbal Medicine</h2>
+                    <p class="philosophy-quote">"Nature provides the most powerful medicine - we simply need to listen
+                        and learn from ancient wisdom."</p>
+                    <p class="philosophy-description">Our medicinal tea collection draws from centuries of traditional
+                        herbal knowledge, combining time-tested remedies with modern understanding of plant compounds.
+                        Each blend is carefully formulated to support specific aspects of wellness, from immune function
+                        to stress management, offering natural alternatives for holistic health.</p>
+                    <a href="about.html" class="btn-outline">Explore Our Philosophy</a>
+                </div>
+                <div class="philosophy-image">
+                    <img src="image/tea-party-ritual.webp" alt="Herbal Medicine">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2 class="newsletter-title">Stay Connected</h2>
+                <p class="newsletter-subtitle">Get wellness tips, new herbal blends, and exclusive offers delivered to
+                    your inbox</p>
+                <form class="newsletter-form" action="success.html" method="GET">
+                    <input type="email" placeholder="Enter your email address" class="newsletter-input" required>
+                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Footer -->
+    <footer class="premium-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="image/phinbrew-logo.webp" alt="Phinbrew" class="footer-logo">
+                    <p class="footer-tagline">Elevating tea culture through authentic Japanese traditions</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-title">Collections</h4>
+                        <a href="green-tea.html" class="footer-link">Green Tea</a>
+                        <a href="black-tea.html" class="footer-link">Black Tea</a>
+                        <a href="tea-accessories.html" class="footer-link">Accessories</a>
+                        <a href="japanese-incense.html" class="footer-link">Incense</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-title">Company</h4>
+                        <a href="about.html" class="footer-link">About Us</a>
+                        <a href="blog.html" class="footer-link">Journal</a>
+                        <a href="contact.html" class="footer-link">Contact</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-title">Connect</h4>
+                        <a href="https://instagram.com/phinbrew" target="_blank" class="footer-link">Instagram</a>
+                        <a href="https://x.com/phinbrew" target="_blank" class="footer-link">Twitter</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 Phinbrew. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>

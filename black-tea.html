@@ -4,67 +4,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Rich black teas at Phinbrew.">
-    <title>Black Tea - Phinbrew</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Yuji+Syuku&display=swap"
+    <meta name="description"
+        content="Premium black teas at Phinbrew - Discover rich, bold flavors from traditional Ceylon, Earl Grey, and artisanal blends.">
+    <title>Black Tea Collection - Phinbrew</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="image/favicon.png">
 </head>
 
 <body>
-    <header>
-        <!-- Header is now just the fixed background image; no content needed here -->
-    </header>
-    <nav class="top-nav">
-        <div class="logo-container">
-            <img src="image/phinbrew-logo.webp" alt="Phinbrew Logo" class="logo">
+    <!-- Premium Navigation -->
+    <nav class="premium-nav">
+        <div class="nav-container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="image/phinbrew-logo.webp" alt="Phinbrew" class="logo">
+                </a>
+            </div>
+
+            <div class="nav-menu">
+                <div class="nav-dropdown">
+                    <span class="nav-item">Tea Collection</span>
+                    <div class="dropdown-menu">
+                        <a href="green-tea.html" class="dropdown-link">Green Tea</a>
+                        <a href="black-tea.html" class="dropdown-link">Black Tea</a>
+                        <a href="oolong-tea.html" class="dropdown-link">Oolong Tea</a>
+                        <a href="medicinal-tea.html" class="dropdown-link">Medicinal Herbs</a>
+                        <a href="herbal-tea.html" class="dropdown-link">Herbal Tea</a>
+                    </div>
+                </div>
+
+                <div class="nav-dropdown">
+                    <span class="nav-item">Accessories</span>
+                    <div class="dropdown-menu">
+                        <a href="tea-accessories.html" class="dropdown-link">Tea Accessories</a>
+                        <a href="coffee-accessories.html" class="dropdown-link">Coffee Accessories</a>
+                    </div>
+                </div>
+
+                <div class="nav-dropdown">
+                    <span class="nav-item">Incense</span>
+                    <div class="dropdown-menu">
+                        <a href="japanese-incense.html" class="dropdown-link">Japanese Incense</a>
+                        <a href="chinese-incense.html" class="dropdown-link">Chinese Incense</a>
+                        <a href="indian-incense.html" class="dropdown-link">Indian Incense</a>
+                        <a href="incense-accessories.html" class="dropdown-link">Accessories</a>
+                    </div>
+                </div>
+
+                <a href="about.html" class="nav-item">About</a>
+                <a href="blog.html" class="nav-item">Journal</a>
+            </div>
+
+            <button class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-        <div class="nav-links">
-            <div class="dropdown">
-                <span class="dropdown-toggle">Tea</span>
-                <div class="dropdown-content">
-                    <a href="green-tea.html">Green Tea</a>
-                    <a href="black-tea.html">Black Tea</a>
-                    <a href="oolong-tea.html">Oolong Tea</a>
-                    <a href="medicinal-tea.html">Medicinal Tea and Herbs</a>
-                    <a href="herbal-tea.html">Herbal Tea</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <span class="dropdown-toggle">Accessories</span>
-                <div class="dropdown-content">
-                    <a href="tea-accessories.html">Tea Accessories</a>
-                    <a href="coffee-accessories.html">Coffee Accessories</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <span class="dropdown-toggle">Traditional Incense</span>
-                <div class="dropdown-content">
-                    <a href="chinese-incense.html">Chinese Incense</a>
-                    <a href="japanese-incense.html">Japanese Incense</a>
-                    <a href="indian-incense.html">Indian Incense</a>
-                    <a href="incense-accessories.html">Incense Accessories</a>
-                </div>
-            </div>
-            <a href="blog.html" class="nav-link">Blog</a>
-            <a href="about.html" class="nav-link">About</a>
-        </div>
-        <button class="mobile-toggle">☰</button>
     </nav>
 
-    <main>
-        <section class="content">
-            <h2>Black Tea</h2>
-            <p>Discover our rich black teas, sourced for bold flavor and quality.</p>
-            <a href="shop.html" class="button">Shop Black Tea</a>
-        </section>
-    </main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-background">
+            <img src="image/tea-party-ritual.webp" alt="Premium Black Tea Collection" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
 
-    <footer>
-        <p>Follow us: <a href="https://x.com/phinbrew" target="_blank">X</a> | <a href="https://instagram.com/phinbrew"
-                target="_blank">Instagram</a></p>
-        <p>&copy; 2025 Phinbrew</p>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Bold <span class="accent-text">Black Tea</span><br>Collection</h1>
+                <p class="hero-subtitle">Experience the rich, full-bodied flavors of our premium black teas, from
+                    classic Ceylon to aromatic Earl Grey, each blend crafted for depth and character.</p>
+                <div class="hero-actions">
+                    <a href="shop.html" class="btn-primary">Shop Black Tea</a>
+                    <a href="about.html" class="btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Black Tea Collection -->
+    <section class="featured-collections">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Black Tea Varieties</h2>
+                <p class="section-subtitle">From robust breakfast blends to delicate afternoon teas, discover our
+                    curated selection of premium black teas</p>
+            </div>
+
+            <div class="collections-grid">
+                <div class="collection-card premium">
+                    <div class="card-image">
+                        <img src="image/tea-party-ritual.webp" alt="Earl Grey Supreme">
+                        <div class="card-overlay">
+                            <span class="collection-badge">Premium</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Earl Grey Supreme</h3>
+                        <p class="card-description">Our signature Earl Grey blend with bergamot oil and cornflower
+                            petals, offering a sophisticated citrus aroma and smooth finish.</p>
+                        <a href="shop.html" class="card-link">Shop Earl Grey →</a>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <div class="card-image">
+                        <img src="image/japanese-tea-farm.jpg" alt="Ceylon Gold">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Ceylon Gold</h3>
+                        <p class="card-description">High-grown Ceylon tea with bright, brisk character and golden
+                            liquor. Perfect for morning or afternoon enjoyment.</p>
+                        <a href="shop.html" class="card-link">Shop Ceylon →</a>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <div class="card-image">
+                        <img src="image/sencha.jpg" alt="English Breakfast">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">English Breakfast</h3>
+                        <p class="card-description">A robust blend of Assam and Ceylon teas, delivering full-bodied
+                            flavor that pairs perfectly with milk and honey.</p>
+                        <a href="shop.html" class="card-link">Shop Breakfast Tea →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Black Tea Benefits -->
+    <section class="philosophy-section">
+        <div class="container">
+            <div class="philosophy-content">
+                <div class="philosophy-text">
+                    <h2 class="philosophy-title">The Strength of Black Tea</h2>
+                    <p class="philosophy-quote">"Black tea embodies boldness and tradition, offering energy and comfort
+                        in every cup."</p>
+                    <p class="philosophy-description">Rich in theaflavins and antioxidants, our premium black teas
+                        provide natural energy while supporting heart health and mental alertness. Each blend represents
+                        centuries of tea craftsmanship, bringing together the finest leaves from renowned growing
+                        regions around the world.</p>
+                    <a href="about.html" class="btn-outline">Discover Our Origins</a>
+                </div>
+                <div class="philosophy-image">
+                    <img src="image/riley-japan.jpg" alt="Tea Master">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2 class="newsletter-title">Stay Connected</h2>
+                <p class="newsletter-subtitle">Get brewing tips, new arrivals, and exclusive offers delivered to your
+                    inbox</p>
+                <form class="newsletter-form" action="success.html" method="GET">
+                    <input type="email" placeholder="Enter your email address" class="newsletter-input" required>
+                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Footer -->
+    <footer class="premium-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="image/phinbrew-logo.webp" alt="Phinbrew" class="footer-logo">
+                    <p class="footer-tagline">Elevating tea culture through authentic Japanese traditions</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-title">Collections</h4>
+                        <a href="green-tea.html" class="footer-link">Green Tea</a>
+                        <a href="black-tea.html" class="footer-link">Black Tea</a>
+                        <a href="tea-accessories.html" class="footer-link">Accessories</a>
+                        <a href="japanese-incense.html" class="footer-link">Incense</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-title">Company</h4>
+                        <a href="about.html" class="footer-link">About Us</a>
+                        <a href="blog.html" class="footer-link">Journal</a>
+                        <a href="contact.html" class="footer-link">Contact</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-title">Connect</h4>
+                        <a href="https://instagram.com/phinbrew" target="_blank" class="footer-link">Instagram</a>
+                        <a href="https://x.com/phinbrew" target="_blank" class="footer-link">Twitter</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 Phinbrew. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>

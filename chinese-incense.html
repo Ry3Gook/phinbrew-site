@@ -4,87 +4,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Traditional Chinese incense at Phinbrew.">
-    <title>Chinese Incense - Phinbrew</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Yuji+Syuku&display=swap"
+    <meta name="description"
+        content="Premium Chinese incense at Phinbrew - Discover traditional Chinese incense for meditation, ceremony, and aromatic harmony.">
+    <title>Chinese Incense Collection - Phinbrew</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="image/favicon.png">
 </head>
 
 <body>
-    <header>
-        <!-- Header is now just the fixed background image; no content needed here -->
-    </header>
-    <nav class="top-nav">
-        <div class="logo-container">
-            <img src="image/phinbrew-logo.webp" alt="Phinbrew Logo" class="logo">
+    <!-- Premium Navigation -->
+    <nav class="premium-nav">
+        <div class="nav-container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="image/phinbrew-logo.webp" alt="Phinbrew" class="logo">
+                </a>
+            </div>
+
+            <div class="nav-menu">
+                <div class="nav-dropdown">
+                    <span class="nav-item">Tea Collection</span>
+                    <div class="dropdown-menu">
+                        <a href="green-tea.html" class="dropdown-link">Green Tea</a>
+                        <a href="black-tea.html" class="dropdown-link">Black Tea</a>
+                        <a href="oolong-tea.html" class="dropdown-link">Oolong Tea</a>
+                        <a href="medicinal-tea.html" class="dropdown-link">Medicinal Herbs</a>
+                        <a href="herbal-tea.html" class="dropdown-link">Herbal Tea</a>
+                    </div>
+                </div>
+
+                <div class="nav-dropdown">
+                    <span class="nav-item">Accessories</span>
+                    <div class="dropdown-menu">
+                        <a href="tea-accessories.html" class="dropdown-link">Tea Accessories</a>
+                        <a href="coffee-accessories.html" class="dropdown-link">Coffee Accessories</a>
+                    </div>
+                </div>
+
+                <div class="nav-dropdown">
+                    <span class="nav-item">Incense</span>
+                    <div class="dropdown-menu">
+                        <a href="japanese-incense.html" class="dropdown-link">Japanese Incense</a>
+                        <a href="chinese-incense.html" class="dropdown-link">Chinese Incense</a>
+                        <a href="indian-incense.html" class="dropdown-link">Indian Incense</a>
+                        <a href="incense-accessories.html" class="dropdown-link">Accessories</a>
+                    </div>
+                </div>
+
+                <a href="about.html" class="nav-item">About</a>
+                <a href="blog.html" class="nav-item">Journal</a>
+            </div>
+
+            <button class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-        <div class="nav-links">
-            <div class="dropdown">
-                <span class="dropdown-toggle">Tea</span>
-                <div class="dropdown-content">
-                    <a href="green-tea.html">Green Tea</a>
-                    <a href="black-tea.html">Black Tea</a>
-                    <a href="oolong-tea.html">Oolong Tea</a>
-                    <a href="medicinal-tea.html">Medicinal Tea and Herbs</a>
-                    <a href="herbal-tea.html">Herbal Tea</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <span class="dropdown-toggle">Accessories</span>
-                <div class="dropdown-content">
-                    <a href="tea-accessories.html">Tea Accessories</a>
-                    <a href="coffee-accessories.html">Coffee Accessories</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <span class="dropdown-toggle">Traditional Incense</span>
-                <div class="dropdown-content">
-                    <a href="chinese-incense.html">Chinese Incense</a>
-                    <a href="japanese-incense.html">Japanese Incense</a>
-                    <a href="indian-incense.html">Indian Incense</a>
-                    <a href="incense-accessories.html">Incense Accessories</a>
-                </div>
-            </div>
-            <a href="blog.html" class="nav-link">Blog</a>
-            <a href="about.html" class="nav-link">About</a>
-        </div>
-        <button class="mobile-toggle">☰</button>
     </nav>
 
-    <main>
-        <section class="content">
-            <h2>Chinese Incense</h2>
-            <p>Traditional Chinese incense for relaxation and aromatic ambiance. Our selection includes premium blends
-                sourced from ancient recipes, perfect for meditation, home fragrance, or cultural rituals.</p>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-background">
+            <img src="image/tea-party-ritual.webp" alt="Premium Chinese Incense Collection" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
 
-            <!-- Add a product grid or descriptions -->
-            <div class="product-grid">
-                <div class="product-item">
-                    <img src="image/chinese-incense-example1.jpg" alt="Sandalwood Incense" class="product-image">
-                    <h3>Sandalwood Blend</h3>
-                    <p>Calming woody aroma, 50 sticks per pack.</p>
-                    <a href="shop.html?product=sandalwood" class="button">Buy Now - $15</a>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Traditional <span class="accent-text">Chinese Incense</span><br>Collection</h1>
+                <p class="hero-subtitle">Discover the ancient art of Chinese incense, crafted from time-honored recipes
+                    for meditation, ceremony, and creating harmonious spaces.</p>
+                <div class="hero-actions">
+                    <a href="shop.html" class="btn-primary">Shop Chinese Incense</a>
+                    <a href="about.html" class="btn-secondary">Learn More</a>
                 </div>
-                <div class="product-item">
-                    <img src="image/chinese-incense-example2.jpg" alt="Jasmine Incense" class="product-image">
-                    <h3>Jasmine Fusion</h3>
-                    <p>Floral notes for uplifting energy, 50 sticks per pack.</p>
-                    <a href="shop.html?product=jasmine" class="button">Buy Now - $12</a>
-                </div>
-                <!-- Add more items as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Chinese Incense Collection -->
+    <section class="featured-collections">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Ancient Chinese Incense</h2>
+                <p class="section-subtitle">From sacred temple blends to aromatic wood varieties, explore our curated
+                    selection of traditional Chinese incense</p>
             </div>
 
-            <p>Explore our full range and elevate your space with authentic scents.</p>
-            <a href="shop.html" class="button">Shop All Chinese Incense</a>
-        </section>
-    </main>
+            <div class="collections-grid">
+                <div class="collection-card premium">
+                    <div class="card-image">
+                        <img src="image/tea-party-ritual.webp" alt="Dragon's Blood">
+                        <div class="card-overlay">
+                            <span class="collection-badge">Premium</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Dragon's Blood</h3>
+                        <p class="card-description">Sacred resin incense traditionally used in Chinese temples for
+                            purification and spiritual protection, with deep, mystical fragrance.</p>
+                        <a href="shop.html" class="card-link">Shop Dragon's Blood →</a>
+                    </div>
+                </div>
 
-    <footer>
-        <p>Follow us: <a href="https://x.com/phinbrew" target="_blank">X</a> | <a href="https://instagram.com/phinbrew"
-                target="_blank">Instagram</a></p>
-        <p>&copy; 2025 Phinbrew</p>
+                <div class="collection-card">
+                    <div class="card-image">
+                        <img src="image/japanese-tea-farm.jpg" alt="Agarwood Oud">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Agarwood Oud</h3>
+                        <p class="card-description">Precious agarwood incense with complex, woody aroma prized in
+                            Chinese culture for its calming and meditative properties.</p>
+                        <a href="shop.html" class="card-link">Shop Agarwood →</a>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <div class="card-image">
+                        <img src="image/sencha.jpg" alt="Five Elements">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Five Elements</h3>
+                        <p class="card-description">Balanced blend representing wood, fire, earth, metal, and water
+                            elements, creating harmony and balance in your space.</p>
+                        <a href="shop.html" class="card-link">Shop Five Elements →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chinese Incense Philosophy -->
+    <section class="philosophy-section">
+        <div class="container">
+            <div class="philosophy-content">
+                <div class="philosophy-text">
+                    <h2 class="philosophy-title">The Dao of Fragrance</h2>
+                    <p class="philosophy-quote">"Chinese incense carries the wisdom of five thousand years, connecting
+                        us to the eternal flow of nature's harmony."</p>
+                    <p class="philosophy-description">Chinese incense tradition spans millennia, rooted in Taoist
+                        philosophy and Traditional Chinese Medicine. Our collection honors ancient formulations that
+                        balance the five elements, purify energy, and create sacred spaces for meditation and
+                        reflection. Each blend represents centuries of aromatic wisdom.</p>
+                    <a href="about.html" class="btn-outline">Explore Our Tradition</a>
+                </div>
+                <div class="philosophy-image">
+                    <img src="image/riley-japan.jpg" alt="Chinese Incense Ceremony">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2 class="newsletter-title">Stay Connected</h2>
+                <p class="newsletter-subtitle">Get ancient wisdom, new incense arrivals, and exclusive offers delivered
+                    to your inbox</p>
+                <form class="newsletter-form" action="success.html" method="GET">
+                    <input type="email" placeholder="Enter your email address" class="newsletter-input" required>
+                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Footer -->
+    <footer class="premium-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="image/phinbrew-logo.webp" alt="Phinbrew" class="footer-logo">
+                    <p class="footer-tagline">Elevating tea culture through authentic Japanese traditions</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-title">Collections</h4>
+                        <a href="green-tea.html" class="footer-link">Green Tea</a>
+                        <a href="black-tea.html" class="footer-link">Black Tea</a>
+                        <a href="tea-accessories.html" class="footer-link">Accessories</a>
+                        <a href="japanese-incense.html" class="footer-link">Incense</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-title">Company</h4>
+                        <a href="about.html" class="footer-link">About Us</a>
+                        <a href="blog.html" class="footer-link">Journal</a>
+                        <a href="contact.html" class="footer-link">Contact</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-title">Connect</h4>
+                        <a href="https://instagram.com/phinbrew" target="_blank" class="footer-link">Instagram</a>
+                        <a href="https://x.com/phinbrew" target="_blank" class="footer-link">Twitter</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 Phinbrew. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
